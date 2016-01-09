@@ -1,4 +1,5 @@
-/*global $*/
+//Jquery For accessible Tabs
+
 
 // a temp value to cache *what* we're about to show
 var target = null;

@@ -54,7 +54,7 @@ gulp.task('serve', function() {
 	    server: "./"
 	});
 
-	gulp.watch('src/sass/*.scss', ['styles']);
+	gulp.watch('src/sass/**/*.scss', ['styles']);
 	gulp.watch('src/*.html', ['html']);
 	gulp.watch('src/js/*.js', ['scripts']);
 	gulp.watch("app/*.html").on('change', browserSync.reload);
@@ -62,6 +62,6 @@ gulp.task('serve', function() {
 
 });
 
-gulp.task('default', ['styles', 'scripts', 'html'], function() {
+gulp.task('default', ['styles', 'scripts', 'html', 'serve'], function() {
 
 });
