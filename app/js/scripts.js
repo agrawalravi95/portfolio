@@ -1,6 +1,4 @@
 //Jquery For accessible Tabs
-
-
 // a temp value to cache *what* we're about to show
 var target = null;
 
@@ -64,3 +62,20 @@ if (targets.indexOf(window.location.hash) !== -1) {
 } else {
   show();
 }
+
+
+
+/* JS For Background Image
+
+$(document).ready(function() {
+var movementStrength = 25;
+var height = movementStrength / $(window).height();
+var width = movementStrength / $(window).width();
+$("#home").mousemove(function(e){
+          var pageX = e.pageX - ($(window).width() / 2);
+          var pageY = e.pageY - ($(window).height() / 2);
+          var newvalueX = width * pageX * -1 - 25;
+          var newvalueY = height * pageY * -1 - 200;
+          $('#home').css("background-position", newvalueX+"px     "+newvalueY+"px");
+});
+}); */

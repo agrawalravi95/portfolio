@@ -4,6 +4,7 @@ html {
 
 *, *::before, *::after {
   box-sizing: inherit;
+  -webkit-backface-visibility: hidden;
 } 
 
 a {
@@ -16,3 +17,34 @@ a {
   }
 }
 
+section {
+	
+	.title-wrapper {
+		max-width: $max-width;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	div.section__start {
+		content: '';
+		border: 5px solid $brand-color;
+		display: inline-block;
+		width: 45px;
+		height: 1px;
+	}
+
+	h2.section__title {
+		display: inline-block;
+		transform: scale(1.6);
+		margin-left: 2.25rem;
+		color: $brand-color;
+	}
+}
+
+.skew--pos {
+	transform: skewY(5deg);
+}
+
+.skew--neg {
+	transform: skewY(-5deg);	
+}

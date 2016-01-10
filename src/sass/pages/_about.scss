@@ -1,0 +1,105 @@
+section#about {
+	
+	background: white;
+	padding: 5rem 5rem;
+	position: relative;
+	z-index: 5;
+	top: -12rem;
+
+	div.content-wrapper {
+		max-width: $max-width;
+		margin: 0 auto;
+		margin-top: 5rem;
+		position: relative;
+
+		@include flex;
+		flex-flow: row wrap;
+	
+		.about__image {
+			width: 50%;	
+			height: 600px;
+			background-image: url('../assets/about.jpg');
+			background-size: 100%;
+			background-color: white;
+			background-blend-mode: multiply;
+			opacity: 0.5;
+		}
+
+		.about__me {
+			width: 50%;
+			padding: 0 3rem;
+
+			.former-block {
+				.former__position {
+					margin-bottom: 2rem;
+
+					a {
+						text-transform: underline !important;
+					}
+
+					strong {
+						text-transform: uppercase;
+						opacity: 0.5;
+					}
+				}
+			}
+
+			.company-block {
+
+				@include flex;
+				flex-flow: row wrap;
+
+				.company {
+					width: 25%;
+					margin: 1rem 0;
+					padding: 0 0.5rem;
+					opacity: 0.5;
+					border: 1px solid #ddd;
+
+					img {
+						width: 100%;
+						margin: 0 auto;
+						display: block;
+					}
+				}
+			}
+		}
+
+		.about__process {			
+			width: 100%;
+			margin-top: 2rem;
+			padding: 2rem 0;
+			background: #F7F7F7;
+
+			svg#process__svg {
+				path,
+				line {
+					stroke-dasharray: 2000;
+				}
+			}
+			
+			.process__row {
+				@include flex;
+				flex-flow: row wrap;
+				justify-content: space-around;
+
+				.process__stage {
+					width: 100%;
+					padding: 0 1rem;
+					margin-bottom: 1rem;
+					font-size: 1rem;
+					text-transform: uppercase;
+				}
+
+				.process__block {
+					flex: 3;
+					padding: 1rem 2rem;
+					margin: 0 1rem;
+					background: white;
+
+					@include box-shadow(2px, 4px, 4px, rgba(black, 0.1));
+				}
+			}
+		}
+	}
+}

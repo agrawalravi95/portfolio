@@ -5,11 +5,17 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     browserSync = require('browser-sync').create(),
     htmlmin = require('gulp-htmlmin'),
-    jshint = require('gulp-jshint');
+    jshint = require('gulp-jshint'),
+    plumber = require('gulp-plumber');
 
 var sassOptions = {
   style: 'expanded'
 };
+
+gulp.task('assets', function() {
+	return gulp.src('assets/**/*.*')
+	.pipe(gulp.dest('app/assets'))
+})
 
 gulp.task('browser-sync', function() {
     browserSync.init({
@@ -57,11 +63,13 @@ gulp.task('serve', function() {
 	gulp.watch('src/sass/**/*.scss', ['styles']);
 	gulp.watch('src/*.html', ['html']);
 	gulp.watch('src/js/*.js', ['scripts']);
+	gulp.watch('assets/**/*.*', ['assets']);
+	gulp.watch("app/assets/**/*.*").on('change', browserSync.reload);
 	gulp.watch("app/*.html").on('change', browserSync.reload);
 	gulp.watch("app/js/*.js").on('change', browserSync.reload);
 
 });
 
-gulp.task('default', ['styles', 'scripts', 'html', 'serve'], function() {
+gulp.task('default', ['assets', 'styles', 'scripts', 'html', 'serve'], function() {
 
 });
