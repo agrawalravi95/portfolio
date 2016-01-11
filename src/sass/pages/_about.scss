@@ -39,8 +39,12 @@ section#about {
 
 					strong {
 						text-transform: uppercase;
-						opacity: 0.5;
+						opacity: 0.8;
 					}
+				}
+
+				.former__description {
+					color: rgba($text-color, 0.8)
 				}
 			}
 
@@ -90,12 +94,21 @@ section#about {
 				width: 40%;
 				margin: 1rem 1rem;
 
+				h6 {
+
+					img {
+						position: relative;
+						top: 0.5rem;
+						margin-right: 1rem;
+					}
+				}
+
 				p.caption {
 
 					transition: all 300ms ease-in-out;
 					border-bottom: 1px solid $light-grey;
 					padding-bottom: 1.5rem;
-					display: none;
+					padding-left: 3.25rem;
 					cursor: hand;
 
 

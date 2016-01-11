@@ -85,6 +85,7 @@ $('#process__toggle').on('click', function() {
   
   $('.process__caption').toggle();
   $('.about__travel').toggleClass('process__details--open');
+  $('#portfolio-title').toggleClass('process__details--open');
   var text = $(this).text();
   $(this).text(text == '[ Hide Details ]' ? '[ View Details ]' : '[ Hide Details ]');
 
