@@ -79,3 +79,13 @@ $("#home").mousemove(function(e){
           $('#home').css("background-position", newvalueX+"px     "+newvalueY+"px");
 });
 }); */
+var i = 0;
+
+$('#process__toggle').on('click', function() {
+  
+  $('.process__caption').toggle();
+  $('.about__travel').toggleClass('process__details--open');
+  var text = $(this).text();
+  $(this).text(text == '[ Hide Details ]' ? '[ View Details ]' : '[ Hide Details ]');
+
+})

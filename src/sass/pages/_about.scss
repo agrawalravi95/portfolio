@@ -65,40 +65,84 @@ section#about {
 			}
 		}
 
-		.about__process {			
+		.about__process {
 			width: 100%;
 			margin-top: 2rem;
 			padding: 2rem 0;
-			background: #F7F7F7;
 
-			svg#process__svg {
-				path,
-				line {
-					stroke-dasharray: 2000;
+			@include flex;
+			flex-flow: row wrap;
+			justify-content: space-around;
+
+			.process__intro {
+				width: 100%;
+				// text-align: center;
+
+				a#process__toggle {
+
+					cursor: pointer;
+					float: right;
+					margin-right: 1rem;
 				}
 			}
 			
-			.process__row {
+			.process__block {
+				width: 40%;
+				margin: 1rem 1rem;
+
+				p.caption {
+
+					transition: all 300ms ease-in-out;
+					border-bottom: 1px solid $light-grey;
+					padding-bottom: 1.5rem;
+					display: none;
+					cursor: hand;
+
+
+					&:hover {
+						color: $text-color;
+					}
+				}
+			}
+		}
+
+		.about__travel {
+
+			width: 100%;
+
+			&.process__details--open {
+				margin-top: 5rem;
+			}
+			
+			.travel__wrapper {
 				@include flex;
 				flex-flow: row wrap;
-				justify-content: space-around;
 
-				.process__stage {
-					width: 100%;
-					padding: 0 1rem;
-					margin-bottom: 1rem;
-					font-size: 1rem;
-					text-transform: uppercase;
-				}
+				max-width: $max-width;
 
-				.process__block {
-					flex: 3;
-					padding: 1rem 2rem;
-					margin: 0 1rem;
-					background: white;
+				.travel__block {
 
-					@include box-shadow(2px, 4px, 4px, rgba(black, 0.1));
-				}
+					width: 25%;
+					height: 300px;
+
+					img {
+						width: 100%;
+					}
+
+					&.travel__block--big {
+						width: 50%;
+
+						img {
+							height: 300px;
+						}
+					}
+
+				}	
+			}
+
+			a {
+				float: right;
+				margin-top: 2rem;
 			}
 		}
 	}

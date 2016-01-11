@@ -1538,8 +1538,7 @@ header nav ul.tabs li a.selected {
 section#home {
   width: 100%;
   height: 125vh;
-  background: url("../assets/back.jpg") -25px -200px;
-  background-size: calc(125% + 50px);
+  background: url("../assets/back.jpg") 0 -200px;
   z-index: 0;
   padding-top: 2rem;
   position: relative;
@@ -1583,6 +1582,15 @@ section#home .hero-wrapper p.hero-description {
   max-width: 1300px;
   margin: 0 auto;
   display: block;
+}
+
+section#portfolio {
+  width: 100%;
+  height: 100vh;
+  background: url("../assets/back.jpg") 0 -200px;
+  top: -20rem;
+  position: relative;
+  z-index: 3;
 }
 
 section#about {
@@ -1653,13 +1661,6 @@ section#about div.content-wrapper .about__process {
   width: 100%;
   margin-top: 2rem;
   padding: 2rem 0;
-  background: #F7F7F7;
-}
-section#about div.content-wrapper .about__process svg#process__svg path,
-section#about div.content-wrapper .about__process svg#process__svg line {
-  stroke-dasharray: 2000;
-}
-section#about div.content-wrapper .about__process .process__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -1671,20 +1672,59 @@ section#about div.content-wrapper .about__process .process__row {
       -ms-flex-pack: distribute;
           justify-content: space-around;
 }
-section#about div.content-wrapper .about__process .process__row .process__stage {
+section#about div.content-wrapper .about__process .process__intro {
   width: 100%;
-  padding: 0 1rem;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  text-transform: uppercase;
 }
-section#about div.content-wrapper .about__process .process__row .process__block {
-  -webkit-box-flex: 3;
-  -webkit-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
-  padding: 1rem 2rem;
-  margin: 0 1rem;
-  background: white;
-  box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.1);
+section#about div.content-wrapper .about__process .process__intro a#process__toggle {
+  cursor: pointer;
+  float: right;
+  margin-right: 1rem;
+}
+section#about div.content-wrapper .about__process .process__block {
+  width: 40%;
+  margin: 1rem 1rem;
+}
+section#about div.content-wrapper .about__process .process__block p.caption {
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  border-bottom: 1px solid #EDEDED;
+  padding-bottom: 1.5rem;
+  display: none;
+  cursor: hand;
+}
+section#about div.content-wrapper .about__process .process__block p.caption:hover {
+  color: #222;
+}
+section#about div.content-wrapper .about__travel {
+  width: 100%;
+}
+section#about div.content-wrapper .about__travel.process__details--open {
+  margin-top: 5rem;
+}
+section#about div.content-wrapper .about__travel .travel__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  max-width: 1200px;
+}
+section#about div.content-wrapper .about__travel .travel__wrapper .travel__block {
+  width: 25%;
+  height: 300px;
+}
+section#about div.content-wrapper .about__travel .travel__wrapper .travel__block img {
+  width: 100%;
+}
+section#about div.content-wrapper .about__travel .travel__wrapper .travel__block.travel__block--big {
+  width: 50%;
+}
+section#about div.content-wrapper .about__travel .travel__wrapper .travel__block.travel__block--big img {
+  height: 300px;
+}
+section#about div.content-wrapper .about__travel a {
+  float: right;
+  margin-top: 2rem;
 }
