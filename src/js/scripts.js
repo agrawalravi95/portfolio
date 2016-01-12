@@ -102,14 +102,15 @@ var arrow = "portfolio__arrow",
     array = $('.portfolio-block'),
     active = array.siblings("." + open);
 
-$('.portfolio__arrow').on('click', function() {
+$('.portfolio-block').on('click', function() {
+  if($(this).hasClass(open)) return;
 
-  var block = $(this).parent();
+  var block = $(this);
   var index = array.index(block);
   
   if( index == 1 ) {
-    $(this).toggleClass(left);
-    $(this).toggleClass(right);
+    $(this).children('.' + arrow).toggleClass(left);
+    $(this).children('.' + arrow).toggleClass(right);
   }
 
   if(array.index(active) == 1 && index == 0) {
@@ -137,8 +138,8 @@ $('.portfolio__arrow').on('click', function() {
   active.children('.portfolio__description').removeClass('visible');
   active.children('.portfolio__image').removeClass('visible');
 
-  $(this).parent().addClass(open);
-  $(this).parent().removeClass(close);
+  $(this).addClass(open);
+  $(this).removeClass(close);
 
   setTimeout(function() {
     block.children('.portfolio__description').addClass('visible');

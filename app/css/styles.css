@@ -1471,6 +1471,10 @@ h2.section__title {
           transform: skewY(-5deg);
 }
 
+body {
+  background: url("../assets/back.jpg");
+}
+
 .clearfix::after {
   clear: both;
   content: '';
@@ -1633,7 +1637,7 @@ section#portfolio .content-wrapper .portfolio-block:nth-child(3) {
 section#portfolio .content-wrapper .portfolio-block .portfolio__arrow {
   position: absolute;
   left: calc(50% - 1rem);
-  top: 55%;
+  top: 45%;
   z-index: 999;
   cursor: pointer;
   -webkit-transition: -webkit-transform 300ms ease-in-out;
@@ -1922,9 +1926,9 @@ section#about div.content-wrapper .about__travel a {
 }
 
 section#contact {
-  hwight: 50vh;
+  height: 100vh;
   min-height: 600px;
-  background: url("../assets/back.jpg") 0 -200px;
+  background: none;
   position: relative;
   top: -20rem;
   z-index: 20;
