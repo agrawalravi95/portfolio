@@ -1602,8 +1602,7 @@ section#home .hero-wrapper p.hero-description {
 
 section#portfolio {
   width: 100%;
-  height: 100vh;
-  background: #42BEAA;
+  height: 90vh;
   top: -22rem;
   position: relative;
   z-index: 3;
@@ -1618,13 +1617,52 @@ section#portfolio .content-wrapper {
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
 }
+section#portfolio .content-wrapper .portfolio-block {
+  top: -5rem;
+  position: relative;
+}
+section#portfolio .content-wrapper .portfolio-block:nth-child(1) {
+  background: #42BEAA;
+}
+section#portfolio .content-wrapper .portfolio-block:nth-child(2) {
+  background: #4052B7;
+}
+section#portfolio .content-wrapper .portfolio-block:nth-child(3) {
+  background: #543A97;
+}
+section#portfolio .content-wrapper .portfolio-block .portfolio__arrow {
+  position: absolute;
+  left: calc(50% - 1rem);
+  top: 55%;
+  z-index: 999;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+}
+section#portfolio .content-wrapper .portfolio-block .portfolio__arrow:hover, section#portfolio .content-wrapper .portfolio-block .portfolio__arrow:active, section#portfolio .content-wrapper .portfolio-block .portfolio__arrow:focus {
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+}
+section#portfolio .content-wrapper .portfolio-block .portfolio__arrow.portfolio__arrow--left {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+section#portfolio .content-wrapper .portfolio-block .portfolio__arrow.portfolio__arrow--left:hover, section#portfolio .content-wrapper .portfolio-block .portfolio__arrow.portfolio__arrow--left:active, section#portfolio .content-wrapper .portfolio-block .portfolio__arrow.portfolio__arrow--left:focus {
+  -webkit-transform: rotate(180deg) scale(1.2);
+          transform: rotate(180deg) scale(1.2);
+}
 section#portfolio .content-wrapper .portfolio-block.portfolio-block--close {
   width: 10%;
-  background: black;
-  height: 930px;
-  position: relative;
-  top: -5rem;
+  height: 1000px;
   display: inline-block;
+  -webkit-transition: width 300ms linear;
+  transition: width 300ms linear;
+  cursor: pointer;
+}
+section#portfolio .content-wrapper .portfolio-block.portfolio-block--close:hover {
+  width: 12%;
 }
 section#portfolio .content-wrapper .portfolio-block.portfolio-block--close .portfolio__description {
   display: none;
@@ -1632,13 +1670,13 @@ section#portfolio .content-wrapper .portfolio-block.portfolio-block--close .port
 }
 section#portfolio .content-wrapper .portfolio-block.portfolio-block--close .portfolio__image {
   display: none;
+  opacity: 0;
 }
 section#portfolio .content-wrapper .portfolio-block.portfolio-block--open {
   width: 80%;
   padding: 15rem 5rem 5rem 7.5rem;
-  top: -5rem;
-  position: relative;
-  background: #4052b7;
+  -webkit-transition: width 300ms linear;
+  transition: width 300ms linear;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -1650,26 +1688,42 @@ section#portfolio .content-wrapper .portfolio-block.portfolio-block--open {
       -ms-flex-pack: distribute;
           justify-content: space-around;
 }
+section#portfolio .content-wrapper .portfolio-block.portfolio-block--open .portfolio__arrow {
+  display: none;
+}
 section#portfolio .content-wrapper .portfolio-block.portfolio-block--open .portfolio__image {
   width: 40%;
+  opacity: 0;
+  -webkit-transition: opacity 300ms ease-in;
+  transition: opacity 300ms ease-in;
+}
+section#portfolio .content-wrapper .portfolio-block.portfolio-block--open .portfolio__image.visible {
+  opacity: 1;
 }
 section#portfolio .content-wrapper .portfolio-block.portfolio-block--open .portfolio__image img {
   width: 100%;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
 }
 section#portfolio .content-wrapper .portfolio-block.portfolio-block--open .portfolio__description {
   width: 60%;
   padding-left: 0rem;
   margin-top: 3rem;
+  opacity: 0;
+  -webkit-transition: opacity 300ms ease-in;
+  transition: opacity 300ms ease-in;
+}
+section#portfolio .content-wrapper .portfolio-block.portfolio-block--open .portfolio__description.visible {
   opacity: 1;
 }
 section#portfolio .content-wrapper .portfolio-block.portfolio-block--open .portfolio__description h1.portfolio__title {
   font-size: 3.5rem;
   display: inline-block;
   color: white;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 section#portfolio .content-wrapper .portfolio-block.portfolio-block--open .portfolio__description p.portfolio__info {
-  margin-top: 1rem;
+  margin: 2rem 0;
   color: rgba(255, 255, 255, 0.8);
   max-width: 400px;
 }
@@ -1795,6 +1849,31 @@ section#about div.content-wrapper .about__process .process__block p.caption {
 section#about div.content-wrapper .about__process .process__block p.caption:hover {
   color: #222;
 }
+section#about div.content-wrapper .about__process2 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+section#about div.content-wrapper .about__process2 .process2__block {
+  width: 100%;
+  height: 200px;
+  padding: 2rem;
+  position: relative;
+}
+section#about div.content-wrapper .about__process2 .process2__block img {
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  top: 70px;
+}
+section#about div.content-wrapper .about__process2 .process2__block.process2__block--left img {
+  left: 25%;
+}
 section#about div.content-wrapper .about__travel {
   width: 100%;
 }
@@ -1827,4 +1906,26 @@ section#about div.content-wrapper .about__travel .travel__wrapper .travel__block
 section#about div.content-wrapper .about__travel a {
   float: right;
   margin-top: 2rem;
+}
+
+#contact-title {
+  position: relative;
+  z-index: 30;
+  top: -15rem;
+}
+#contact-title h2.section__title {
+  margin-left: 1.7rem;
+  line-height: 1;
+}
+#contact-title .section__start {
+  margin-top: 2rem;
+}
+
+section#contact {
+  hwight: 50vh;
+  min-height: 600px;
+  background: url("../assets/back.jpg") 0 -200px;
+  position: relative;
+  top: -20rem;
+  z-index: 20;
 }

@@ -119,6 +119,35 @@ section#about {
 			}
 		}
 
+		.about__process2 {
+
+			width: 100%;
+			
+			@include flex;
+			flex-flow: row wrap;
+
+			.process2__block {
+				width: 100%;
+				height: 200px;
+				padding: 2rem;
+				position: relative;
+				
+				img {
+					height: 60px;
+					width: 60px;
+					position: absolute;
+					top: 70px;
+				}
+
+				&.process2__block--left {
+
+					img {
+						left: 25%;
+					}
+				}
+			}
+		}
+
 		.about__travel {
 
 			width: 100%;

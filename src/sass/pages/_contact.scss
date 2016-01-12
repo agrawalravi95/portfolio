@@ -1,0 +1,23 @@
+#contact-title {
+	position:relative;
+	z-index: 30;
+	top: -15rem;
+
+	h2.section__title {
+		margin-left: 1.7rem;
+		line-height: 1;
+	}
+
+	.section__start {
+		margin-top: 2rem;
+	}
+}
+
+section#contact {
+	hwight: 50vh;
+	min-height: 600px;
+	background: url('../assets/back.jpg') 0 -200px;
+	position: relative;
+	top: -20rem;
+	z-index: 20;
+}
