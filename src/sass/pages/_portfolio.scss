@@ -4,12 +4,12 @@
 	top: -15rem;
 
 	h2.section__title {
-		margin-left: 1.7rem;
 		line-height: 1;
 	}
 
 	.section__start {
 		margin-top: 2rem;
+		margin-left: 0.5rem;
 	}
 }
 
@@ -24,6 +24,11 @@ section#portfolio {
 	.content-wrapper {
 		margin: 0 auto;
 
+		&:nth-child(2) {
+			position: relative;
+			top: -5rem;
+		}
+
 		@include flex;
 		flex-flow: row nowrap;
 
@@ -31,17 +36,18 @@ section#portfolio {
 
 			top: -5rem;
 			position: relative;
+			max-height: 1000px;
 
 			&:nth-child(1) {
-				background: #42BEAA;
+				background: #33C1A9;
 			}
 
 			&:nth-child(2) {
-				background: #4052B7;
+				background: #3F4DBC;
 			}
 
 			&:nth-child(3) {
-				background: #543A97;
+				background: #512F97;
 			}
 
 			.portfolio__arrow {
@@ -53,7 +59,7 @@ section#portfolio {
 				transition: transform 300ms ease-in-out;
 
 				@include on-event {
-					transform: translateX(5px);
+					transform: translateX(5px) scale(1.2);
 				}
 
 				&.portfolio__arrow--left {
@@ -87,6 +93,10 @@ section#portfolio {
 				display: none;
 				opacity: 0;
 			}
+
+			.portfolio__back {
+				display: none;
+			}
 		}
 
 		
@@ -106,6 +116,8 @@ section#portfolio {
 			.portfolio__image {
 				width: 40%;
 				opacity: 0;
+				margin-top: 1rem;
+				z-index: 10;
 				transition: opacity 300ms ease-in;
 
 				&.visible {
@@ -124,6 +136,7 @@ section#portfolio {
 				padding-left: 0rem;
 				margin-top: 3rem;
 				opacity: 0;
+				z-index: 10;
 				transition: opacity 300ms ease-in;
 
 				&.visible {
@@ -143,16 +156,50 @@ section#portfolio {
 					max-width: 400px;
 				}
 
-				button {
-					border-radius: 35px;
+				button.button--case-study {
 					background: #FFB921;
-					padding: .5rem 2rem;
-					font-size: 1rem;
-					border: none;
-					outline: none;
-					font-weight: bold;
 					color: white;
-					letter-spacing: 2px;
+				}
+			}
+
+			.portfolio__back {
+				position: absolute;
+				top: 15rem;
+				left: 0;
+				z-index: 0;
+				opacity: 0;
+				transition: opacity 300ms ease-in;
+
+				&.visible {
+					opacity: 1;
+				}
+
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+		
+		&:nth-child(2) {
+			background: white;
+			padding: 2rem 2rem 6rem 2rem;
+			position: relative;
+			top: -10rem;
+
+			.skew--neg {
+				@include flex;
+				flex-wrap: row wrap;
+			}
+		
+			.portfolio__gettoknow {
+				width: 100%;
+				padding: 5rem;
+
+				.button--gettoknow {
+					background: none;
+					border: 3px solid $brand-color;
+					color: $brand-color;
 				}
 			}
 		}

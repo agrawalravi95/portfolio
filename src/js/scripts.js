@@ -113,22 +113,22 @@ $('.portfolio-block').on('click', function() {
     $(this).children('.' + arrow).toggleClass(right);
   }
 
-  if(array.index(active) == 1 && index == 0) {
+  if(array.index(active) === 1 && index === 0) {
     active.children('.' + arrow).addClass(left);
     active.children('.' + arrow).removeClass(right);
   }
 
-  if(array.index(active) == 1 && index == 2) {
+  if(array.index(active) === 1 && index === 2) {
     active.children('.' + arrow).addClass(right);
     active.children('.' + arrow).removeClass(left);
   }
 
-  if(array.index(active) == 0 && index == 2) {
+  if(array.index(active) === 0 && index === 2) {
     array.eq(1).children('.' + arrow).addClass(right);
     array.eq(1).children('.' + arrow).removeClass(left);
   }
 
-  if(array.index(active) == 2 && index == 0) {
+  if(array.index(active) === 2 && index === 0) {
     array.eq(1).children('.' + arrow).addClass(left);
     array.eq(1).children('.' + arrow).removeClass(right);
   }
@@ -137,16 +137,24 @@ $('.portfolio-block').on('click', function() {
   active.removeClass(open);
   active.children('.portfolio__description').removeClass('visible');
   active.children('.portfolio__image').removeClass('visible');
+  active.children('.portfolio__back').removeClass('visible');
 
   $(this).addClass(open);
   $(this).removeClass(close);
 
   setTimeout(function() {
     block.children('.portfolio__description').addClass('visible');
-    block.children('.portfolio__image').addClass('visible');
   }, 200);
 
-  active = array.siblings("." + open);
-  
+  setTimeout(function () {
+    block.children('.portfolio__image').addClass('visible');
+    block.children('.portfolio__back').addClass('visible');
+  }, 400);
+
+  active = array.siblings("." + open);  
 
 });
+
+
+//Other JS
+
