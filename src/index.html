@@ -26,13 +26,14 @@
 	<section id="home" data-0="transform:translate3d(0px,0px,0px)" data-1200="transform:translate3d(0px,320px,0px)">
 				
 		<div class="hero-wrapper">
-			<h1 class="hero-text"> RAVI AGRAWAL </h1>
-
-			<!-- <h1 class="hero-text background-text"> I solve <span>systematic</span> problems. </h1> -->
-
-
-			<p class="hero-description"> I am a designer based in New Delhi, India who crafts things that appear on screens. I am passionate about creative use of technology and always strive for the user to get the best out of it. This is a portfolio of projects I have worked on in the past. </p>
+			<span class="hero-hello"> Hey, I'm </span>
+			<h1 class="hero-text"> Ravi Agrawal. </h1>
+			<p class="hero-description"> Product <span class="dot">.</span> UX Designer</p>
+			<button class="filled hero-button">Write me an email</button>
+			<button class="hero-button">Discover my work</button>
 		</div>
+
+		<img src="assets/about.jpg" class="hero-image" alt="My photograph"/>
 
 	</section>
 
@@ -40,33 +41,65 @@
 	  
 	  <div class="skew--neg">
 
-	  	<div class="title-wrapper" data-200="transform:translate3d(0px,-60px,0px);opacity:0" data-500="transform:translate3d(0px,0px,0px);opacity:1">
+	  	<div class="title-wrapper" data-200="transform:translate3d(-60px,0px,0px);opacity:0" data-1200="transform:translate3d(60px,0px,0px);opacity:1">
 	  		<h2 class="section__title">ABOUT</h2>
 		  	<br>
-			<div class="section__start"></div>
-		</div>
+			</div>
 
 		<div class="content-wrapper" data-300="transform:translate3d(0px,160px,0px)" data-500="transform:translate3d(0px,0px,0px)">
-			<div class="about__image">
-	  		</div>
+			<div class="about__left">
+	  		<div class="current-block">
+					<div class="current__logo">[Insert Spinny Logo]</div>
+						<div class="current__position">Currently at 
+							<a href="http://myspinny.com">Spinny</a>
+							<br>
+							<strong>Product and UX Lead</strong>
+						</div>
+		  		</div>
+					
+					<div class="former-block">
+						<div class="former__row">
+							<div class="former__date">
+								<span class="former__date__title">DATE</span>
+								<span class="former__date__hr" size="5"></span>
+								<span class="former__date__content">May 2015 - Mar 2016</span>
+							</div>
+						</div>
+						<div class="former__row">
+							<h3 class="former__company">UX Designer, <a href="http://designforuse.net">Design For Use</a></h3>
+						</div>
+					</div>
 
-	  		<div class="about__me">
-				<div class="former-block">
-					<div class="former__logo">DFU</div>
-					<div class="former__position">Currently at 
-					<a href="http://designforuse.net">Design For Use</a><br> <strong>UX Designer</div>
-					<p class="former__description caption">
-						I have been producing great designs for clients through workshops, information architecture, product and interaction design via collaboration with designers, engineers and stakeholders for the users. I fight for the user, continuously striving to inspire empathy and promote creation of usable, beautiful applications.
+					<div class="former-block">
+						<div class="former__row">
+							<div class="former__date">
+								<span class="former__date__title">DATE</span>
+								<span class="former__date__hr" size="5"></span>
+								<span class="former__date__content">Jul 2014  - May 2015</span>
+							</div>
+						</div>
+						<div class="former__row">
+							<h3 class="former__company">Design Head, <a href="http://designforuse.net">Pixoc</a></h3>
+						</div>
+					</div>
+
+		  	</div>
+
+	  		<div class="about__right">
+				
+					<p class="about__description caption">
+						I was brought up in the foothills of Himalayas - Kathmandu, Nepal, a peaceful enchanting valley built upon the pillars of pro-culture and nature-loving people. My will to explore and take on new challenges led me to embrace the chaos of the other side of the world. I am now working as Design Head for Spinny based out of Gurgaon, India. 
 
 						<br> <br>
 
-						In my free time, I build
-						<a href="http://github.com/agrawalravi95">tools</a> to make the web a better place to surf and write about design and daily hacks in my
-						<a href="http://agrawalravi.com/blog/"> blog </a>. Over the years I have become a design generalist, a creative thinker and a bridge between designers and developers.
-					</p>	
-				</div>
+						This sense of exploration is what I take into my work. Why? Because what I am connects with what I do. I always look forward to getting into creative adventures in order to push myself and to feel the excitement of creating new and amazing things everyday.
 
-				<div class="company-block">
+						<br><br>
+
+						I am one of those who think designers should know how to code, not because they could get a product live but to understand how everything works, deep within. Personally, learning to code has helped me explore more feasible and performant possibilities while crafting user experiences.
+					</p>	
+
+				<!-- <div class="company-block">
 					<div class="company" data-950="opacity:0" data-1000="opacity:0.3">
 						<img src="assets/logos/micromax.jpg" alt="Micromax">
 					</div>
@@ -83,7 +116,7 @@
 						<img src="assets/logos/bmo.jpg" alt="Bank of Montreal">
 					</div>
 				</div>				
-			</div>
+			</div> -->
 
 			<!-- <div class="about__process" data-1050="transform:translate3d(0px, 160px, 0px)" data-1450="transform:translate3d(0px, 0px, 0px)">
 				
@@ -160,21 +193,43 @@
 					<img src="assets/svgs/test.svg" alt="Research" class="process2__img">
 				</div>
 			</div> -->
-
-			
 		</div>
-	  </div>
+		
+		<div class="about__music">
+			<p class="about__music__description"> <span class="quote__mark">"</span>I believe music fuels what we do, what we think, who we are. I am a craver for sound waves that strike the eardrum and produce a sense of pleasure in my skull.
+			<br><br>
+			<span class="currently">Currently listening to</span> <br>
+			<span class="about__music__title">Pink Floyd - <span class="about__music__title__song">Wish You Were Here</span></span>
+			</p>
+
+			<span class="about__music__width-fix">.</span>
+			<ul class="about__music__bars">
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			</ul>
+
+
+			<!-- <div class="about__music__image">
+				<img src="http://www.thebeatles.com/monovinyl/images/site/record.png" alt="Last FM logo" class="about__music__vinyl">
+				<img src="https://images-na.ssl-images-amazon.com/images/I/71m0ofUWYXL._SL1300_.jpg" alt="Last Song Album Cover" class="album__art">
+			</div> -->
+		</div>
+		</div>
+	  </div> <!-- Skew Neg End -->
 	</section>
 
 	<div class="title-wrapper" id="portfolio-title"
 		
-		data--100-bottom="opacity:0;transform:translate3d(0px, -100px, 0px)"
-		
-		data-200-top="opacity:1; transform:translate3d(0px, 60px, 0px);"
+		data--100-bottom="opacity:0;transform:translate3d(-120px, 0px, 0px)"
+0
+		data-200-top="opacity:1; transform:translate3d(0px, 0px, 0px);"
 		>
-			<h2 class="section__title">PORTFOLIO</h2>
+			<h2 class="section__title">WORK</h2>
 			<br>
-			<div class="section__start"></div>
+
 		</div>
 
 	<section id="portfolio" class="skew--pos">
@@ -335,7 +390,6 @@
 		>
 		<h2 class="section__title">DESIGN <br> PROCESS </h2>
 		<br>
-		<div class="section__start"></div>
 	</div>
 
 	<section id="contact" class="skew--pos">

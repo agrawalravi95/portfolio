@@ -1,15 +1,24 @@
-@mixin on-event($self: false) {
+@mixin on-hover-focus($self: false) {
   @if $self {
     &,
-    &:hover,
-    &:active,
-    &:focus {
+    &:hover {
       @content;
     }
   } @else {
-    &:hover,
-    &:active,
-    &:focus {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin on-active($self: false) {
+  @if $self {
+    &,
+    &:active{
+      @content;
+    }
+  } @else {
+    &:active{
       @content;
     }
   }
@@ -45,5 +54,12 @@
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+}
+
+@mixin transform($content) {
+  -moz-transform: $content;
+  -o-transform: $content;
+  -webkit-transform: $content;
+  transform: $content;
 }
 

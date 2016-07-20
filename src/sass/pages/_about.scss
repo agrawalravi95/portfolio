@@ -1,7 +1,7 @@
 section#about {
 	
 	background: white;
-	padding: 5rem 5rem;
+	padding: 8rem 5rem;
 	position: relative;
 	z-index: 5;
 	top: -12rem;
@@ -15,22 +15,12 @@ section#about {
 		@include flex;
 		flex-flow: row wrap;
 	
-		.about__image {
-			width: 50%;	
-			height: 600px;
-			background-image: url('../assets/about.jpg');
-			background-size: 100%;
-			background-color: white;
-			background-blend-mode: multiply;
-			opacity: 0.5;
-		}
+		.about__left {
+			width: 40%;
+			padding-top: 9rem;	
 
-		.about__me {
-			width: 50%;
-			padding: 0 3rem;
-
-			.former-block {
-				.former__position {
+			.current-block {
+				.current__position {
 					margin-bottom: 2rem;
 
 					a {
@@ -43,10 +33,40 @@ section#about {
 						font-size: 1.5rem;
 					}
 				}
+			}
 
-				.former__description {
-					color: rgba($text-color, 0.8)
+			.former-block {
+
+				border-top: 2px solid $brand-color;
+				padding: 2rem 0;
+
+				.former__date {
+					.former__date__title {
+						color: rgba($text-color, 0.5);
+					}
+
+					.former__date__hr {
+						width: 30px;
+						display: inline-block;
+						border: 2px solid $brand-color;
+						margin: 0.2rem 1rem;
+					}
 				}
+				.former__company {
+					padding-top: 0;
+				}
+			}
+		}
+
+		.about__right {
+			width: 60%;
+			padding: 0 3rem;
+			padding-top: 3rem;	
+			padding-left: 5rem;
+			position: relative;
+
+			p.about__description {
+				color: rgba($text-color, 0.8)
 			}
 
 			.company-block {
@@ -70,83 +90,248 @@ section#about {
 			}
 		}
 
-		.about__process {
+		.about__music {
 			width: 100%;
 			margin-top: 2rem;
-			padding: 2rem 0;
+			// background: #232526; /* fallback for old browsers */
+			// background: -webkit-linear-gradient(right, #232526, #414345);
+			// background: -o-linear-gradient(right, #232526, #414345);
+			// background: linear-gradient(to left, #232526, #414345); 
+			background: url('http://raumrot.com/wp-content/uploads/2016/02/msp_1407_2876.jpg');
+			background-size: cover;
+			background-position: 0 -100px;
+			position: relative;
 
 			@include flex;
 			flex-flow: row wrap;
-			justify-content: space-around;
-
-			.process__intro {
-				width: 100%;
-				// text-align: center;
-
-				a#process__toggle {
-
-					cursor: pointer;
-					float: right;
-					margin-right: 1rem;
-				}
-			}
 			
-			.process__block {
-				width: 40%;
-				margin: 1rem 1rem;
-
-				h6 {
-
-					img {
-						position: relative;
-						top: 0.5rem;
-						margin-right: 1rem;
-					}
-				}
-
-				p.caption {
-
-					transition: all 300ms ease-in-out;
-					border-bottom: 1px solid $light-grey;
-					padding-bottom: 1.5rem;
-					padding-left: 3.25rem;
-					cursor: hand;
-
-
-					&:hover {
-						color: $text-color;
-					}
-				}
-			}
-		}
-
-		.about__process2 {
-
-			width: 100%;
-			
-			@include flex;
-			flex-flow: row wrap;
-
-			.process2__block {
-				width: 100%;
-				height: 200px;
-				padding: 2rem;
+			p.about__music__description {
+				color: white;
+				padding: 0 5rem;
+				padding-top: 6rem;
+				width: 50%;
+				display: block; 
+				font-size: 1.5rem;
+				line-height: 1.5;
 				position: relative;
-				
-				img {
-					height: 60px;
-					width: 60px;
+
+				span.quote__mark {
+					color: rgba(white,0.2);
+					font-size: 15rem;
+					font-family: cursive;
 					position: absolute;
-					top: 70px;
+					top: -5rem;
+					left: 2rem;
+					display: none;
+				}
+				
+				span.currently {
+					font-size: 0.75rem;
+					text-transform: uppercase;
+					opacity: 0.8;
+					position: relative;
+					left: 6rem;
 				}
 
-				&.process2__block--left {
+				span.about__music__title {
+					color: rgba(white,0.8);
+					text-transform: capitalize;
+					position: relative;
+					left: 6rem;
 
-					img {
-						left: 25%;
+					span.about__music__title__song {
+						color: white;
+						text-transform: capitalize;
 					}
 				}
 			}
+
+			span.about__music__width-fix {
+				opacity: 0;
+				width: 50%;
+				display: block;
+			}
+
+			ul.about__music__bars {
+				  position: relative;
+				  top: -7rem;
+				  left: 5rem;
+				  
+				  display: block;
+				  width: 5rem;
+				  height: 5rem;
+				  font-size: 0;
+				  overflow: hidden;
+				  
+				  li {
+				    display: inline-block;
+				    width: .8rem;
+				    height: 100%;
+				    margin: 0 .1rem;
+				    border-radius: 2px;
+				    list-style: none;
+				    background: #fff;
+				    
+				    transform: translateY(4.5rem);
+				    animation: bounce 1s infinite cubic-bezier(0,0,0,1);
+				    
+				    @for $i from 1 through 5 {
+				      
+				      $time: random(12) * 0.1;
+				      
+				      &:nth-of-type(#{$i}) {
+				        animation-delay: $time + s;
+				      }
+				    }
+				  }
+				}
+
+				@keyframes bounce {
+				  0% {
+				    transform: translateY(4.5rem);
+				  }
+				  50% {
+				    transform: translateY(.25rem);
+				  }
+				  100% {
+				    transform: translateY(4.5rem);
+				  }
+				}
+
+		
+			.about__music__image {
+				width: 50%;
+				padding: 3rem;
+				position: relative;
+				top: 2rem;
+				display: inline;
+		
+				@keyframes rotate__cover {
+					from {
+						transform: rotate(0deg);
+					}
+					to {
+						transform: rotate(360deg);
+					}
+				}
+		
+				@-webkit-keyframes rotate__cover {
+					from {
+						transform: rotate(0deg);
+					}
+					to {
+						transform: rotate(360deg);
+					}
+				}
+		
+				img.album__art {
+					border-radius: 50%;
+					vertical-align: middle;
+					max-width: 300px;
+					width: 100%;
+					padding: .5rem;
+					background: rgba(white,0.05);
+					border: 1px solid rgba(white,0.5);
+					display: block;
+					margin: 0 auto;
+		
+					animation: rotate__cover 25s linear infinite;
+				}
+		
+				img.about__music__vinyl {
+					position: absolute;
+					left: 0;
+					right: 0;
+					top: 3rem;
+					z-index: 10;
+					max-width: 300px;
+					width: 100%;
+					padding: .5rem;
+					opacity: 0.3;
+					display: block;
+					margin: 0 auto;
+					animation: rotate__cover 24s linear infinite;
+				}
+			}
 		}
+
+		// .about__process {
+		// 	width: 100%;
+		// 	margin-top: 2rem;
+		// 	padding: 2rem 0;
+
+		// 	@include flex;
+		// 	flex-flow: row wrap;
+		// 	justify-content: space-around;
+
+		// 	.process__intro {
+		// 		width: 100%;
+		// 		// text-align: center;
+
+		// 		a#process__toggle {
+
+		// 			cursor: pointer;
+		// 			float: right;
+		// 			margin-right: 1rem;
+		// 		}
+		// 	}
+			
+		// 	.process__block {
+		// 		width: 40%;
+		// 		margin: 1rem 1rem;
+
+		// 		h6 {
+
+		// 			img {
+		// 				position: relative;
+		// 				top: 0.5rem;
+		// 				margin-right: 1rem;
+		// 			}
+		// 		}
+
+		// 		p.caption {
+
+		// 			transition: all 300ms ease-in-out;
+		// 			border-bottom: 1px solid $light-grey;
+		// 			padding-bottom: 1.5rem;
+		// 			padding-left: 3.25rem;
+		// 			cursor: hand;
+
+
+		// 			&:hover {
+		// 				color: $text-color;
+		// 			}
+		// 		}
+		// 	}
+		// }
+
+		// .about__process2 {
+
+		// 	width: 100%;
+			
+		// 	@include flex;
+		// 	flex-flow: row wrap;
+
+		// 	.process2__block {
+		// 		width: 100%;
+		// 		height: 200px;
+		// 		padding: 2rem;
+		// 		position: relative;
+				
+		// 		img {
+		// 			height: 60px;
+		// 			width: 60px;
+		// 			position: absolute;
+		// 			top: 70px;
+		// 		}
+
+		// 		&.process2__block--left {
+
+		// 			img {
+		// 				left: 25%;
+		// 			}
+		// 		}
+		// 	}
+		// }
 	}
 }

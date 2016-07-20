@@ -1,12 +1,7 @@
 #portfolio-title {
 	position:relative;
 	z-index: 10;
-	top: -15rem;
-
-	h2.section__title {
-		margin-left: 5rem;
-		line-height: 1;
-	}
+	top: -10rem;
 
 	.section__start {
 		margin-top: 2rem;
@@ -30,7 +25,7 @@ section#portfolio {
 
 		.portfolio-block {
 			
-			top: -5rem;
+			top: 5rem;
 			position: relative;
 			min-height: 90vh;
 			width: 100%;
@@ -48,7 +43,6 @@ section#portfolio {
 
 			.portfolio__image {
 				width: 40%;
-				margin-top: 1rem;
 				z-index: 10;
 				transition: opacity 300ms ease-in;
 
@@ -117,14 +111,14 @@ section#portfolio {
 				cursor: pointer;
 				transition: transform 300ms ease-in-out;
 
-				@include on-event {
+				@include on-hover-focus {
 					transform: translateX(5px) scale(1.2);
 				}
 
 				&.portfolio__arrow--left {
 					transform: rotate(180deg);
 
-					@include on-event {
+					@include on-hover-focus {
 						transform: rotate(180deg) scale(1.2);
 					}
 				}
