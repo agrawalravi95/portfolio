@@ -1,11 +1,14 @@
 #contact-title {
 	position:relative;
 	z-index: 30;
-	top: -15rem;
+	top: -30rem;
+	
 
 	h2.section__title {
 		margin-left: 1.7rem;
 		line-height: 1;
+		color: white;
+		transform: skewY(-5deg);	
 	}
 
 	.section__start {
@@ -15,8 +18,28 @@
 
 section#contact {
 	height: 50vh;
-	background: #DDD;
+	background: #EEE;
 	position: relative;
-	top: -20rem;
+	top: -35rem;
 	z-index: 20;
+
+	.title-wrapper {
+		position: relative;
+		z-index: 25;
+	}
+
+	.contact__front-img {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 30;
+	}
+
+	// .contact__back-img {
+	// 	position: absolute;
+	// 	top: 0;
+	// 	left: 0;
+	// 	width: 100%;
+	// }
 }

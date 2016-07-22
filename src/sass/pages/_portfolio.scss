@@ -11,21 +11,16 @@
 
 section#portfolio {
 	width: 100%;
-	top: -22rem;
+	top: -25rem;
 	position: relative;
 	z-index: 3;
+	background: #33c1a9;
 
 	.content-wrapper {
 		margin: 0 auto;
 
-		&:nth-child(2) {
-			position: relative;
-			top: -5rem;
-		}
-
 		.portfolio-block {
-			
-			top: 5rem;
+			top: 10rem;
 			position: relative;
 			min-height: 90vh;
 			width: 100%;
@@ -80,7 +75,7 @@ section#portfolio {
 
 			.portfolio__back {
 				position: absolute;
-				top: 0;
+				top: 20%;
 				left: 0;
 				z-index: 0;
 				width: 100%;
@@ -127,19 +122,69 @@ section#portfolio {
 		
 		&:nth-child(2) {
 			background: white;
-			padding: 2rem 2rem 6rem 2rem;
+			padding: 8rem 2rem 8rem 2rem;
 			position: relative;
-			top: -10rem;
+			top: -5rem;
 
 			.skew--neg {
 				max-width: $max-width;
 				margin: 0 auto;
+				@include flex;
+				flex-flow: row wrap;
+				justify-content: space-between;
+
+				h3 {
+					width: 100%;
+				}
 			}
 		
 			.portfolio__gettoknow {
-				width: 100%;
+				width: 45%;
 				padding: 2rem 0;
 				margin: 2rem 0;
+				display: inline-block;
+
+				&.portfolio__soft-stack {
+					width: 100%;
+
+					@include flex;
+					flex-flow: row wrap;
+					justify-content: space-around;
+
+					h4 {
+						width: 100%;
+						margin-bottom: 4rem;
+						text-align: center;
+					}
+
+					.portfolio__soft-stack__block {
+						width: 200px;
+						margin-right: 2rem; 
+						margin-bottom: 4rem;
+
+						img {
+							display: block;
+							margin: 0 auto;
+							height: 150px;
+							width: 150px;
+						}
+
+						h6 {
+							width: 100%;
+							color: rgba($text-color, 0.7);
+							text-align: center;
+						}
+					}
+				}
+
+				h4 {
+					color: $brand-color;
+				}
+
+				img {
+					width: 500px;
+					height: 250px;
+				}
 
 				p.caption {
 					margin-top: .5rem;
