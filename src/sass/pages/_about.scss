@@ -17,7 +17,11 @@ section#about {
 	
 		.about__left {
 			width: 40%;
-			padding-top: 9rem;	
+			padding-top: 9rem;
+
+			@media #{$tablet} {
+				width: 100%;
+			}	
 
 			.current-block {
 				.current__position {
@@ -65,8 +69,18 @@ section#about {
 			padding-left: 5rem;
 			position: relative;
 
+			@media #{$tablet} {
+				width: 100%;
+				padding-left: 0;
+			}
+
 			p.about__description {
-				color: rgba($text-color, 0.8)
+				color: rgba($text-color, 0.8);
+
+				@media #{$tablet} {
+					font-size: 1.2rem;
+					line-height: 1.8;
+				}
 			}
 
 			.company-block {
@@ -93,27 +107,33 @@ section#about {
 		.about__music {
 			width: 100%;
 			margin-top: 5rem;
-			// background: #232526; /* fallback for old browsers */
-			// background: -webkit-linear-gradient(right, #232526, #414345);
-			// background: -o-linear-gradient(right, #232526, #414345);
-			// background: linear-gradient(to left, #232526, #414345); 
 			background: url('http://raumrot.com/wp-content/uploads/2016/02/msp_1407_2876.jpg');
+			background-repeat: no-repeat;
 			background-size: cover;
-			background-position: 0 -100px;
 			position: relative;
+			padding-bottom: 5rem;
+
+			@media #{$mobile} {
+				display: none;
+			}
 
 			@include flex;
 			flex-flow: row wrap;
 			
 			p.about__music__description {
 				color: white;
-				padding: 0 5rem;
+				padding: 0 7rem;
 				padding-top: 6rem;
-				width: 50%;
+				width: 100%;
+				max-width: 600px;
 				display: block; 
 				font-size: 1.5rem;
 				line-height: 1.5;
 				position: relative;
+
+				@media #{laptop} {
+					width: 75%;
+				}
 
 				span.quote__mark {
 					color: rgba(white,0.2);
@@ -146,22 +166,13 @@ section#about {
 				}
 			}
 
-			span.about__music__width-fix {
-				opacity: 0;
-				width: 50%;
-				display: block;
-			}
-
 			ul.about__music__bars {
-				  position: relative;
-				  top: -7rem;
-				  left: 5rem;
-				  
-				  display: block;
-				  width: 5rem;
-				  height: 5rem;
-				  font-size: 0;
-				  overflow: hidden;
+				  left: 7rem;
+			    position: absolute;
+			    bottom: 5.5rem;
+			    height: 5rem;
+			    font-size: 0;
+			    overflow: hidden;
 				  
 				  li {
 				    display: inline-block;

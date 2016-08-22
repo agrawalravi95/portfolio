@@ -34,7 +34,7 @@ $base-url: 		'/assets/' !default;
 
 //Responsive Breakpoints
 
-$bp-small : 	40em !default;
-$bp-med : 		50em !default;
-$bp-large : 	64em !default;
-$bp-xl : 		100em !default;
+$mobile : 	"only screen and (max-width : 37.5em)";
+$tablet : 		"only screen and (max-width : 50em)";
+$laptop : 	"only screen and (max-width : 70em)";
+$desktop : 		"only screen and (max-width : 90em)";

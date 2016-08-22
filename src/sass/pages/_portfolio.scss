@@ -2,6 +2,7 @@
 	position:relative;
 	z-index: 10;
 	top: -10rem;
+	margin-left: 5rem;
 
 	.section__start {
 		margin-top: 2rem;
@@ -25,14 +26,25 @@ section#portfolio {
 			min-height: 90vh;
 			width: 100%;
 
+			&:nth-child(1) {
+				.portfolio-content {
+					padding-top: 15rem;						
+				}
+			}
+
 			.portfolio-content {
 				display: block;
-				padding: 15rem 5rem 5rem 0;
+				padding: 15rem 5rem 5rem 5rem;
 				@include flex;
 				flex-flow: row nowrap;
 				justify-content: space-around;
 				max-width: $max-width;
 				margin: 0 auto;
+
+				@media #{$laptop} {
+					padding-left: 5rem;
+					padding-top: 10rem;
+				}
 			}
 			
 
@@ -97,27 +109,6 @@ section#portfolio {
 			&:nth-child(3) {
 				background: #512F97;
 			}
-
-			.portfolio__arrow {
-				position: absolute;
-				left: calc(50% - 1rem);
-				top: 45%;
-				z-index: 999;
-				cursor: pointer;
-				transition: transform 300ms ease-in-out;
-
-				@include on-hover-focus {
-					transform: translateX(5px) scale(1.2);
-				}
-
-				&.portfolio__arrow--left {
-					transform: rotate(180deg);
-
-					@include on-hover-focus {
-						transform: rotate(180deg) scale(1.2);
-					}
-				}
-			}
 		}
 		
 		&:nth-child(2) {
@@ -126,6 +117,10 @@ section#portfolio {
 			position: relative;
 			top: -5rem;
 
+			@media #{$laptop} {
+				top: 5rem;
+			}
+
 			.skew--neg {
 				max-width: $max-width;
 				margin: 0 auto;
@@ -133,7 +128,7 @@ section#portfolio {
 				flex-flow: row wrap;
 				justify-content: space-between;
 
-				h3 {
+				h2 {
 					width: 100%;
 				}
 			}
@@ -143,6 +138,15 @@ section#portfolio {
 				padding: 2rem 0;
 				margin: 2rem 0;
 				display: inline-block;
+
+				@media #{$mobile} {
+					width: 100%;
+				}
+
+				p.caption {
+					font-size: 1rem;
+					line-height: 2;
+				}
 
 				&.portfolio__soft-stack {
 					width: 100%;
@@ -155,7 +159,7 @@ section#portfolio {
 						justify-content: space-around;
 					}
 
-					h4 {
+					h3 {
 						width: 100%;
 						margin-bottom: 4rem;
 						text-align: center;
@@ -173,9 +177,11 @@ section#portfolio {
 							margin: 0 auto;
 							height: 125px;
 							width: 125px;
+
+
 						}
 
-						h6 {
+						h4 {
 							width: 100%;
 							color: rgba($text-color, 0.7);
 							text-align: center;
@@ -183,14 +189,19 @@ section#portfolio {
 					}
 				}
 
-				h4 {
+				h3 {
 					color: $brand-color;
 				}
 
-				img {
-					width: 500px;
-					height: 250px;
+				.img-container {
+					max-width: 500px;
+
+					img {
+						width: 100%;
+					}
 				}
+
+				
 
 				p.caption {
 					margin-top: .5rem;
