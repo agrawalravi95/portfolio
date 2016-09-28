@@ -6,11 +6,17 @@ section#about {
 	z-index: 5;
 	top: -12rem;
 
+	@media #{$mobile} {
+		padding: 8rem 2rem;
+	}
+
 	div.content-wrapper {
 		max-width: $max-width;
 		margin: 0 auto;
 		margin-top: 5rem;
 		position: relative;
+
+		will-change: transform;
 
 		@include flex;
 		flex-flow: row wrap;
@@ -72,6 +78,7 @@ section#about {
 			@media #{$tablet} {
 				width: 100%;
 				padding-left: 0;
+				padding-right: 0;
 			}
 
 			p.about__description {
@@ -113,7 +120,7 @@ section#about {
 			position: relative;
 			padding-bottom: 5rem;
 
-			@media #{$mobile} {
+			@media #{$tablet} {
 				display: none;
 			}
 

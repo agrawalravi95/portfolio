@@ -1,0 +1,28 @@
+.banner--spinny {
+	background-color: rgba(150,242,182,1);
+	background: url('https://hd.unsplash.com/photo-1445001804887-80767051ecb4');
+	background: linear-gradient(left top, rgba(150,242,182,0.7) 0%, rgba(133,184,136,0.7) 100%), url('https://hd.unsplash.com/photo-1445001804887-80767051ecb4');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.work__icon--spinny {
+
+	position: relative;
+
+	img {
+		max-height: 200px;
+		max-width: 200px;	
+	}
+
+	h2 {
+		position: absolute;
+		top: 0;
+		left: calc(200px + 2rem);
+		bottom: 0;
+
+		line-height: 200px;
+		margin-left: 2rem;
+	}
+}
+

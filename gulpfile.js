@@ -27,8 +27,8 @@ gulp.task('browser-sync', function() {
 
 gulp.task('html', function  () {
 
-	return gulp.src('src/*.html')
-    .pipe(htmlmin({collapseWhitespace: true}))
+	return gulp.src('src/**/*.html')
+    //.pipe(htmlmin({collapseWhitespace: false}))
     .pipe(gulp.dest('app'));
 
 })
@@ -61,11 +61,11 @@ gulp.task('serve', function() {
 	});
 
 	gulp.watch('src/sass/**/*.scss', ['styles']);
-	gulp.watch('src/*.html', ['html']);
+	gulp.watch('src/**/*.html', ['html']);
 	gulp.watch('src/js/*.js', ['scripts']);
 	gulp.watch('assets/**/*.*', ['assets']);
 	gulp.watch("app/assets/**/*.*").on('change', browserSync.reload);
-	gulp.watch("app/*.html").on('change', browserSync.reload);
+	gulp.watch("app/**/*.html").on('change', browserSync.reload);
 	gulp.watch("app/js/*.js").on('change', browserSync.reload);
 
 });

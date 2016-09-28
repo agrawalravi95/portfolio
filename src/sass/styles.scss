@@ -2,6 +2,7 @@
 
 // Font Requirements
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import 'https://fonts.googleapis.com/css?family=Bitter';
 
 // 1. Configuration and helpers
 @import
@@ -31,4 +32,6 @@
   'pages/portfolio',
   'pages/about',
   'pages/contact',
-  'pages/me';
+  'pages/me',
+  'work/common',
+  'work/spinny';

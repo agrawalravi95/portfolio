@@ -13,7 +13,38 @@ html, body {
 	padding:0;
 	height:100%;
 	background: #171a21;
+}
 
+body {
+	max-height: 8300px !important;
+}
+
+body.fade-out {
+	animation: fade-out 500ms ease-out;
+}
+
+@keyframes fade-out {
+	from{
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	to {
+		opacity: 0;
+		transform: scale(0.98);
+	}
+}
+
+@-webkit-keyframes fade-out {
+	from{
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	to {
+		opacity: 0;
+		transform: scale(0.95);
+	}
 }
 
 a {
@@ -35,6 +66,8 @@ a {
 	max-width: $max-width;
 	margin: 0 auto;
 	position: relative;
+
+	will-change: transform, opacity;
 }
 
 h2.section__title {
@@ -50,6 +83,9 @@ h2.section__title {
 	@media #{$tablet} {
 		font-size: 10rem;
 	}
+	@media #{$mobile} {
+		font-size: 5rem;
+	}
 }
 
 button {
@@ -63,6 +99,11 @@ button {
 	outline: none;
 	font-weight: bold;
 	letter-spacing: 1.4px;
+
+	@media #{$mobile} {
+		padding: 1rem 0;
+		font-size: 1rem;
+	}
 
 	transition: all 300ms ease-in-out;
 
@@ -89,3 +130,46 @@ button {
 .skew--neg {
 	transform: skewY(-5deg);	
 }
+
+.almighty-container {
+	max-width: 1340px;
+	margin: 5rem auto;
+	position: relative;
+	z-index: 10;
+	overflow: hidden;
+
+	@media #{$laptop} {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		background: none;
+	}
+
+	&.almighty-container--body {
+		max-height: 8600px;
+
+		@media #{$desktop} {
+			max-height: 8400px;
+		}
+
+		@media #{$tablet} {
+			max-height: 7800px;
+		}
+
+		@media #{$mobile} {
+			max-height: 8000px;
+		}
+	}
+}
+
+.body-background-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: auto;
+	z-index: 0;
+	opacity: .5;
+}
+
+

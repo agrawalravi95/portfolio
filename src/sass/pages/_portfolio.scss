@@ -2,7 +2,11 @@
 	position:relative;
 	z-index: 10;
 	top: -10rem;
-	margin-left: 5rem;
+	margin-left: 8rem;
+
+	@media #{$mobile} {
+		margin-left: 2rem;
+	}
 
 	.section__start {
 		margin-top: 2rem;
@@ -15,7 +19,7 @@ section#portfolio {
 	top: -25rem;
 	position: relative;
 	z-index: 3;
-	background: #33c1a9;
+	background: #F4F1BB;
 
 	.content-wrapper {
 		margin: 0 auto;
@@ -32,6 +36,10 @@ section#portfolio {
 				}
 			}
 
+			&:nth-child(3) {
+				padding-bottom: 15rem;
+			}
+
 			.portfolio-content {
 				display: block;
 				padding: 15rem 5rem 5rem 5rem;
@@ -45,43 +53,76 @@ section#portfolio {
 					padding-left: 5rem;
 					padding-top: 10rem;
 				}
+
+				@media #{$mobile} {
+					flex-flow: column-reverse wrap;
+					padding-left: 2rem;
+					padding-right: 2rem;
+					padding-top: 5rem;
+				}
+
 			}
 			
 
 			.portfolio__image {
-				width: 40%;
+				width: 50%;
 				z-index: 10;
+				margin-top: 5rem;
 				transition: opacity 300ms ease-in;
+
+				will-change: transform, opacity;
 
 				img {
 					width: 100%;
-					transform: scaleX(-1);
+					// transform: scaleX(-1);
+				}
+
+				@media #{$mobile} {
+					width: 100%;
 				}
 			}
 
 			.portfolio__description {
 
-				width: 60%;
+				width: 50%;
 				margin-top: 1rem;
 				z-index: 10;
 				transition: opacity 300ms ease-in;
 
+				@media #{$mobile} {
+					width: 100%;
+				}
+
 				h1.portfolio__title {
 					font-size: 3.5rem;
 					display: inline-block;
-					color:white;
+					// color:white;
 					line-height: 1.2;
+
+					will-change: transform, opacity;
+
+					@media #{$mobile} {
+						font-size: 2.5rem;
+					}
 				}
 
 				p.portfolio__info {
 					margin: 2rem 0;
-					color: white;
+					// color: white;
 					max-width: 400px;
+
+					will-change: transform;
 				}
 
 				button.button--case-study {
-					background: #FFB921;
+					background: $brand-color;
 					color: white;
+
+					will-change: transform, opacity;
+
+					@media #{$mobile} {
+						width: 100%;
+					}
 				}
 			}
 
@@ -91,6 +132,7 @@ section#portfolio {
 				left: 0;
 				z-index: 0;
 				width: 100%;
+				opacity: 0;
 
 				img {
 					width: 100%;
@@ -99,15 +141,25 @@ section#portfolio {
 			}
 
 			&:nth-child(1) {
-				background: #33C1A9;
+				background: #F4F1BB;
 			}
 
 			&:nth-child(2) {
-				background: #3F4DBC;
+				background: #B2F7EF;
+
+				.portfolio-content {
+					padding-top: 8rem;
+					padding-bottom: 8rem;
+				}
 			}
 
 			&:nth-child(3) {
-				background: #512F97;
+				background: #7BDFF2;
+
+				.portfolio-content {
+					padding-top: 8rem;
+					padding-bottom: 8rem;
+				}
 			}
 		}
 		
@@ -130,17 +182,25 @@ section#portfolio {
 
 				h2 {
 					width: 100%;
+					margin-left: 3rem;
+
+					@media #{$mobile} {
+						margin-left: 0;
+					}
 				}
 			}
 		
 			.portfolio__gettoknow {
-				width: 45%;
-				padding: 2rem 0;
-				margin: 2rem 0;
+				width: 50%;
+				padding: 2rem 3rem;
 				display: inline-block;
+
+				will-change: transform, opacity;
 
 				@media #{$mobile} {
 					width: 100%;
+					padding-left: 0rem;
+					padding-right: 0rem;
 				}
 
 				p.caption {
@@ -157,6 +217,10 @@ section#portfolio {
 						@include flex;
 						flex-flow: row no-wrap;
 						justify-content: space-around;
+
+						@media #{$mobile} {
+							flex-flow: row wrap;
+						}				
 					}
 
 					h3 {
@@ -172,19 +236,56 @@ section#portfolio {
 						margin-bottom: 4rem;
 						display: inline-block;
 
+						&:nth-child(5) {
+
+							@media #{$tablet} {
+								display: none;								
+							}
+						}
+
+						@media #{$tablet} {
+							width: 25%;
+						}
+
+						@media #{$mobile} {
+							width: 50%;
+							margin-right: 0;
+						}
+
 						img {
 							display: block;
 							margin: 0 auto;
 							height: 125px;
 							width: 125px;
 
+							@media #{$tablet} {
+								width: 75px;
+								height: 75px;
+							}
 
+							@media #{$mobile} {
+								width: 35px;
+								height: 35px;
+								display: inline-block;
+							}
 						}
 
 						h4 {
 							width: 100%;
 							color: rgba($text-color, 0.7);
 							text-align: center;
+
+							@media #{$tablet} {
+								font-size: 1.25rem;
+							}
+
+							@media #{$mobile} {
+								width: 65%;
+								float: right;
+								padding: 0;
+								text-align: left;
+								padding-top: 0.25rem;
+							}
 						}
 					}
 				}
