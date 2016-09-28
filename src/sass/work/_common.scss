@@ -1,0 +1,109 @@
+.almighty-container--work {
+  background: #F9FAFC;
+  margin-bottom: 0;
+  @media #{$laptop} {
+    margin-top: 0;
+  }
+
+  p {
+    font-family: 'Bitter', serif;
+  }
+}
+
+.banner {
+  height: 90vh;
+  min-height: 300px;
+  text-align: center;
+  position: relative;
+  padding: 5% 0;
+  span.banner__date {
+    top: 2rem;
+    text-transform: uppercase;
+    color: white;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    display: block;
+    opacity: 0.8;
+    &::before {
+      margin-right: 0.8rem;
+    }
+    &::after {
+      margin-left: 0.5rem;
+    }
+    &::before,
+    &::after {
+      content: '-------------------------------------------------------------------------------------------------------';
+      letter-spacing: -2px;
+      overflow: hidden;
+      user-select: none;
+    }
+  }
+  h1.banner__title {
+    padding: 10% 0;
+    text-transform: uppercase;
+    color: white;
+    font-size: 3.5rem;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+    letter-spacing: 2px;
+  }
+}
+
+.work-content {
+  padding: 5rem;
+  .work__role {
+    width: 35%;
+    display: inline-block;
+  }
+  .work__about {
+    width: 45%;
+    margin-right: 6rem;
+    display: inline-block;
+    float: left;
+  }
+  .work__icon {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    img {
+      display: inline-block;
+    }
+    h2 {
+      display: inline-block;
+      padding: 0;
+    }
+  }
+  p.work__paragraph {
+    max-width: $paragraph-max-width;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+  .work__image-container {
+    width: 100%;
+    margin: 2rem 0;
+    padding: 0 1rem;
+
+    figure {
+			img {
+	      width: 100%;
+	    }
+
+	    figcaption {
+	    	display: block;
+	    	text-align: center;
+	    	font-size: 0.8rem;
+	    	font-weight: 400;
+	    	font-family: 'Bitter', serif;
+	    	text-decoration: underline;
+	    	opacity: 0.5;
+	    }
+    }
+
+    &.half {
+      width: 50%;
+      float: left;
+    }
+  }
+}
+

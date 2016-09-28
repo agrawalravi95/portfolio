@@ -1,0 +1,190 @@
+#contact-title {
+	position:relative;
+	z-index: 30;
+	top: 2rem;
+	
+
+	h2.section__title {
+		line-height: 1;
+		color: rgba(white,0.5);
+		transform: skewY(-5deg);	
+
+		span {
+			@media #{$mobile} {
+				display: none;
+			}
+		}
+	}
+
+	@media #{$laptop} {
+		margin-left: 5rem;
+		top: -2rem;
+	}
+
+	@media #{$mobile} {
+		top: 7rem;
+		margin-left: 2rem;
+	}
+
+	.section__start {
+		margin-top: 2rem;
+	}
+}
+
+section#contact {
+	position: relative;
+	top: -34rem;
+	z-index: 20;
+	width: 100vw;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	height: 1500px;
+
+
+	@media #{$desktop} {
+		height: 1200px;
+	}
+
+	@media #{$laptop} {
+		height:1400px;
+		top: -28rem;
+	}
+
+	@media #{$mobile} {
+		top: -30rem;
+	}
+
+	.title-wrapper {
+		position: relative;
+		z-index: 25;
+	}
+
+	.contact__front-img {
+		position: absolute;
+		top: 13.75rem;
+		left: 0;
+		z-index: 30;
+		overflow-x: hidden;
+		clip: rect(0px, $almighty-width, 100vh, 0px);
+
+		@media #{$desktop} {
+			top: 14.5rem;
+		}
+
+		@media #{$mobile} {
+			// top: -5.25rem;
+			display: none;
+		}
+	}
+
+	.contact__back-img {
+		position: absolute;
+		top: -5rem;
+		left: 0;
+		overflow-x: hidden;
+		clip: rect(0px, $almighty-width, 100vh, 0px);
+
+		@media #{$mobile} {
+			// top: -5.25rem;
+			display: none;
+		}
+	}
+
+	.content-wrapper {
+		position: absolute;
+		z-index: 50;
+		float: right;
+		width: 100%;
+		top: 50rem;
+		padding-left: 8rem;
+
+		@media #{$mobile} {
+			padding-left: 2rem;
+			top: 22rem;
+		}
+
+		@include flex;
+		flex-flow: row wrap;
+
+		color: white;
+
+		h2.contact__heading {
+			color: white;
+			letter-spacing:1px;
+			width: 100%;
+		}
+
+		.contact__description {
+			width: 40%;
+
+			p {
+				max-width: 400px;
+			}
+
+			button {
+				display: block;
+			}
+
+			@media #{$laptop} {
+				width: 40%;
+			}
+
+			@media #{$tablet} {
+				width: 100%;
+			}
+		}
+
+		ul.contact__list {
+			list-style: none;
+			width: 40%;
+
+			@media #{$tablet} {
+				width: 100%;
+			}
+
+			li {
+				display: inline-block;
+				width: 50%;
+				line-height: 40px;
+				margin-bottom: 2rem;
+				float: left;
+
+				&:nth-child(1) {
+					margin-left: 0;
+				}
+
+				@media #{$mobile} {
+					width: 30px;
+				}
+
+				img {
+					width: 25px;
+					max-height: 27px;
+					position: relative;
+					vertical-align: middle;
+				}
+
+				span {
+					position: relative;
+					top: 3px;
+					margin-left: 1rem;
+					color: white;
+
+					@media #{$mobile} {
+						display: none;
+					}
+
+					@include on-hover-focus {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+
+		button {
+			margin-top: 2rem;
+			width: 100%;
+			max-width: 300px;
+		}
+	}
+}

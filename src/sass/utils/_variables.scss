@@ -1,0 +1,42 @@
+$text-font-stack: 'Montserrat', sans-serif !default;
+
+/// Copy text color
+/// @type Color
+$text-color: 	#070707 !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: 	#E50050 !default;
+
+/// Light grey
+/// @type Color
+$light-grey: 	#EDEDED !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: 		#999 !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: 	#444 !default;
+
+/// Container's maximum width
+/// Below that is 100%
+/// @type Length
+$max-width: 	1200px !default;
+$almighty-width: 		1340px !default;
+$paragraph-max-width:    900px !default;
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: 		'/assets/' !default;
+
+//Responsive Breakpoints
+
+$mobile : 	"only screen and (max-width : 37.5em)";
+$tablet : 		"only screen and (max-width : 57em)";
+$laptop : 	"only screen and (max-width : 80em)";
+$desktop : 		"only screen and (max-width : 90em)";

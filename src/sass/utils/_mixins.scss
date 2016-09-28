@@ -1,0 +1,55 @@
+@mixin on-hover-focus($self: false) {
+  @if $self {
+    &,
+    &:hover {
+      @content;
+    }
+  } @else {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin on-active($self: false) {
+  @if $self {
+    &,
+    &:active{
+      @content;
+    }
+  } @else {
+    &:active{
+      @content;
+    }
+  }
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $left $top $blur $color;
+    -moz-box-shadow:inset $left $top $blur $color;
+    box-shadow:inset $left $top $blur $color;
+  } @else {
+    -webkit-box-shadow: $left $top $blur $color;
+    -moz-box-shadow: $left $top $blur $color;
+    box-shadow: $left $top $blur $color;
+  }
+}
+
+
+
+@mixin flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin transform($content) {
+  -moz-transform: $content;
+  -o-transform: $content;
+  -webkit-transform: $content;
+  transform: $content;
+}
+

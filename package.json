@@ -1,0 +1,38 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ravi Agrawal",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.11.0",
+    "connect-livereload": "^0.5.4",
+    "convert-source-map": "^1.1.3",
+    "dargs": "^4.1.0",
+    "each-async": "^1.1.1",
+    "express": "^4.13.3",
+    "glob": "^6.0.3",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-htmlmin": "^1.3.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-minify-css": "^1.2.3",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^1.0.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.7",
+    "jshint": "^2.8.0",
+    "mkdirp": "^0.5.1",
+    "object-assign": "^4.0.1",
+    "rimraf": "^2.5.0",
+    "slash": "^1.0.0",
+    "tiny-lr": "^0.2.1",
+    "vinyl": "^1.1.0",
+    "win-spawn": "^2.0.0"
+  }
+}

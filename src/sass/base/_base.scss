@@ -1,0 +1,175 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  -webkit-backface-visibility: hidden;
+}
+
+html, body {
+	margin:0;
+	padding:0;
+	height:100%;
+	background: #171a21;
+}
+
+body {
+	max-height: 8300px !important;
+}
+
+body.fade-out {
+	animation: fade-out 500ms ease-out;
+}
+
+@keyframes fade-out {
+	from{
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	to {
+		opacity: 0;
+		transform: scale(0.98);
+	}
+}
+
+@-webkit-keyframes fade-out {
+	from{
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	to {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+}
+
+a {
+  color: $brand-color;
+  text-decoration: none;
+
+  @include on-hover-focus {
+    color: $text-color;
+    text-decoration: underline;
+  }
+
+  @include on-active {
+  	color: $brand-color;
+  	text-decoration: underline;
+  }
+}
+	
+.title-wrapper {
+	max-width: $max-width;
+	margin: 0 auto;
+	position: relative;
+
+	will-change: transform, opacity;
+}
+
+h2.section__title {
+	display: inline-block;
+	position: absolute;
+	margin-top: 5rem;
+	font-size: 13rem;
+	color: rgba($text-color, 0.1);
+
+	@media #{$laptop} {
+		font-size: 12rem;
+	}
+	@media #{$tablet} {
+		font-size: 10rem;
+	}
+	@media #{$mobile} {
+		font-size: 5rem;
+	}
+}
+
+button {
+	border-radius: 35px;
+	padding: .5rem 2rem;
+	color: $brand-color;
+	background: none;
+	font-size: .8rem;
+	text-transform: uppercase;
+	border: none;
+	outline: none;
+	font-weight: bold;
+	letter-spacing: 1.4px;
+
+	@media #{$mobile} {
+		padding: 1rem 0;
+		font-size: 1rem;
+	}
+
+	transition: all 300ms ease-in-out;
+
+	@include on-hover-focus {
+		transform:scale(1.1) !important;
+		@include box-shadow(2px, 2px, 4px, rgba(black, 0.1))
+	}
+
+	@include on-active {
+		transform:scale(1.0) !important;
+	}
+
+	&.filled {
+		background: $brand-color;
+		color: white;
+	}
+}
+
+
+.skew--pos {
+	transform: skewY(5deg);
+}
+
+.skew--neg {
+	transform: skewY(-5deg);	
+}
+
+.almighty-container {
+	max-width: 1340px;
+	margin: 5rem auto;
+	position: relative;
+	z-index: 10;
+	overflow: hidden;
+
+	@media #{$laptop} {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		background: none;
+	}
+
+	&.almighty-container--body {
+		max-height: 8600px;
+
+		@media #{$desktop} {
+			max-height: 8400px;
+		}
+
+		@media #{$tablet} {
+			max-height: 7800px;
+		}
+
+		@media #{$mobile} {
+			max-height: 8000px;
+		}
+	}
+}
+
+.body-background-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: auto;
+	z-index: 0;
+	opacity: .5;
+}
+
+

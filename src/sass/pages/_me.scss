@@ -1,0 +1,52 @@
+section#me {
+	height: 50vh;
+	min-height: 500px;
+	z-index: 40;
+	position: relative;
+	top: -30rem;
+	background: #DDD;
+
+	.content-wrapper {
+		max-width: $max-width;
+		margin: 0 auto;
+
+		@include flex;
+		flex-flow: row wrap;
+
+		.me__travel {
+
+			width: 100%;
+			
+			.travel__wrapper {
+				@include flex;
+				flex-flow: row wrap;
+
+				max-width: $max-width;
+
+				.travel__block {
+
+					width: 25%;
+					height: 300px;
+
+					img {
+						width: 100%;
+					}
+
+					&.travel__block--big {
+						width: 50%;
+
+						img {
+							height: 300px;
+						}
+					}
+
+				}	
+			}
+
+			a {
+				float: right;
+				margin-top: 2rem;
+			}
+		}
+	}
+}
