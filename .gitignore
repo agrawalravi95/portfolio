@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # Created by https://www.gitignore.io/api/node,bower
 
@@ -6,6 +7,11 @@
 logs
 *.log
 npm-debug.log*
+=======
+# Logs
+logs
+*.log
+>>>>>>> c1dc25f38b668b10d4a490c14118244ca38d371d
 
 # Runtime data
 pids
@@ -28,6 +34,7 @@ coverage
 build/Release
 
 # Dependency directory
+<<<<<<< HEAD
 # https://docs.npmjs.com/misc/faq#should-i-check-my-node-modules-folder-into-git
 node_modules
 
@@ -46,3 +53,7 @@ bower_components
 
 # Sass Cache
 .sass-cache
+=======
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
+node_modules
+>>>>>>> c1dc25f38b668b10d4a490c14118244ca38d371d
