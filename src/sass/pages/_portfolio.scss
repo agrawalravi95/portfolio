@@ -38,6 +38,10 @@ section#portfolio {
 
 			&:nth-child(3) {
 				padding-bottom: 15rem;
+
+				@media #{$mobile} {
+					padding-bottom: 5rem;
+				}
 			}
 
 			.portfolio-content {
@@ -58,7 +62,7 @@ section#portfolio {
 					flex-flow: column-reverse wrap;
 					padding-left: 2rem;
 					padding-right: 2rem;
-					padding-top: 5rem;
+					padding-top: 2rem;
 				}
 
 			}
@@ -79,6 +83,7 @@ section#portfolio {
 
 				@media #{$mobile} {
 					width: 100%;
+					margin-top: 2rem;
 				}
 			}
 
@@ -107,7 +112,8 @@ section#portfolio {
 				}
 
 				p.portfolio__info {
-					margin: 2rem 0;
+					margin-bottom: 2rem;
+					margin-top: 0.5rem;
 					// color: white;
 					max-width: 400px;
 
@@ -150,6 +156,10 @@ section#portfolio {
 				.portfolio-content {
 					padding-top: 8rem;
 					padding-bottom: 8rem;
+
+					@media #{$mobile} {
+						padding-top: 1rem;
+					}
 				}
 			}
 
@@ -159,6 +169,10 @@ section#portfolio {
 				.portfolio-content {
 					padding-top: 8rem;
 					padding-bottom: 8rem;
+
+					@media #{$mobile} {
+						padding-top: 1rem;
+					}
 				}
 			}
 		}

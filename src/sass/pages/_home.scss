@@ -24,6 +24,11 @@ section#home {
 		width: 50%;
 		max-height: 90vh;
 
+		@media #{$mobile} {
+			right: auto;
+			left: 0;
+		}
+
 		img.hero-image {
 			width: 100%;
 		}
@@ -32,11 +37,12 @@ section#home {
 
 	.hero-wrapper {
 		position: absolute;
-		top: 20%;
+		top: 25%;
 		z-index: 5;
 
 		@media #{$mobile} {
 			padding-right: 2rem;
+			padding-left: 1rem;
 		}
 
 		span.hero-hello {

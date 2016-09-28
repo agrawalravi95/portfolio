@@ -116,6 +116,12 @@ button {
 		transform:scale(1.0) !important;
 	}
 
+	@media #{$tablet} {
+		@include on-hover-focus {
+			transform: none;
+		}
+	}
+
 	&.filled {
 		background: $brand-color;
 		color: white;
@@ -132,13 +138,13 @@ button {
 }
 
 .almighty-container {
-	max-width: 1340px;
+	max-width: 1370px;
 	margin: 5rem auto;
 	position: relative;
 	z-index: 10;
 	overflow: hidden;
 
-	@media #{$laptop} {
+	@media #{$desktop} {
 		width: 100%;
 		margin: 0;
 		padding: 0;

@@ -1544,6 +1544,12 @@ button:active {
   -webkit-transform: scale(1) !important;
           transform: scale(1) !important;
 }
+@media only screen and (max-width: 57em) {
+  button:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
 button.filled {
   background: #E50050;
   color: white;
@@ -1560,13 +1566,13 @@ button.filled {
 }
 
 .almighty-container {
-  max-width: 1340px;
+  max-width: 1370px;
   margin: 5rem auto;
   position: relative;
   z-index: 10;
   overflow: hidden;
 }
-@media only screen and (max-width: 80em) {
+@media only screen and (max-width: 85.5em) {
   .almighty-container {
     width: 100%;
     margin: 0;
@@ -1577,7 +1583,7 @@ button.filled {
 .almighty-container.almighty-container--body {
   max-height: 8600px;
 }
-@media only screen and (max-width: 90em) {
+@media only screen and (max-width: 85.5em) {
   .almighty-container.almighty-container--body {
     max-height: 8400px;
   }
@@ -1690,17 +1696,24 @@ section#home .hero-image-container {
   width: 50%;
   max-height: 90vh;
 }
+@media only screen and (max-width: 37.5em) {
+  section#home .hero-image-container {
+    right: auto;
+    left: 0;
+  }
+}
 section#home .hero-image-container img.hero-image {
   width: 100%;
 }
 section#home .hero-wrapper {
   position: absolute;
-  top: 20%;
+  top: 25%;
   z-index: 5;
 }
 @media only screen and (max-width: 37.5em) {
   section#home .hero-wrapper {
     padding-right: 2rem;
+    padding-left: 1rem;
   }
 }
 section#home .hero-wrapper span.hero-hello {
@@ -1801,6 +1814,11 @@ section#portfolio .content-wrapper .portfolio-block:nth-child(1) .portfolio-cont
 section#portfolio .content-wrapper .portfolio-block:nth-child(3) {
   padding-bottom: 15rem;
 }
+@media only screen and (max-width: 37.5em) {
+  section#portfolio .content-wrapper .portfolio-block:nth-child(3) {
+    padding-bottom: 5rem;
+  }
+}
 section#portfolio .content-wrapper .portfolio-block .portfolio-content {
   display: block;
   padding: 15rem 5rem 5rem 5rem;
@@ -1826,7 +1844,7 @@ section#portfolio .content-wrapper .portfolio-block .portfolio-content {
         flex-flow: column-reverse wrap;
     padding-left: 2rem;
     padding-right: 2rem;
-    padding-top: 5rem;
+    padding-top: 2rem;
   }
 }
 section#portfolio .content-wrapper .portfolio-block .portfolio__image {
@@ -1843,6 +1861,7 @@ section#portfolio .content-wrapper .portfolio-block .portfolio__image img {
 @media only screen and (max-width: 37.5em) {
   section#portfolio .content-wrapper .portfolio-block .portfolio__image {
     width: 100%;
+    margin-top: 2rem;
   }
 }
 section#portfolio .content-wrapper .portfolio-block .portfolio__description {
@@ -1869,7 +1888,8 @@ section#portfolio .content-wrapper .portfolio-block .portfolio__description h1.p
   }
 }
 section#portfolio .content-wrapper .portfolio-block .portfolio__description p.portfolio__info {
-  margin: 2rem 0;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
   max-width: 400px;
   will-change: transform;
 }
@@ -1905,12 +1925,22 @@ section#portfolio .content-wrapper .portfolio-block:nth-child(2) .portfolio-cont
   padding-top: 8rem;
   padding-bottom: 8rem;
 }
+@media only screen and (max-width: 37.5em) {
+  section#portfolio .content-wrapper .portfolio-block:nth-child(2) .portfolio-content {
+    padding-top: 1rem;
+  }
+}
 section#portfolio .content-wrapper .portfolio-block:nth-child(3) {
   background: #7BDFF2;
 }
 section#portfolio .content-wrapper .portfolio-block:nth-child(3) .portfolio-content {
   padding-top: 8rem;
   padding-bottom: 8rem;
+}
+@media only screen and (max-width: 37.5em) {
+  section#portfolio .content-wrapper .portfolio-block:nth-child(3) .portfolio-content {
+    padding-top: 1rem;
+  }
 }
 section#portfolio .content-wrapper:nth-child(2) {
   background: white;
@@ -2251,24 +2281,24 @@ section#about div.content-wrapper .about__music ul.about__music__bars li {
           animation: bounce 1s infinite cubic-bezier(0, 0, 0, 1);
 }
 section#about div.content-wrapper .about__music ul.about__music__bars li:nth-of-type(1) {
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
 }
 section#about div.content-wrapper .about__music ul.about__music__bars li:nth-of-type(2) {
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
 }
 section#about div.content-wrapper .about__music ul.about__music__bars li:nth-of-type(3) {
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
-}
-section#about div.content-wrapper .about__music ul.about__music__bars li:nth-of-type(4) {
   -webkit-animation-delay: 0.9s;
           animation-delay: 0.9s;
 }
+section#about div.content-wrapper .about__music ul.about__music__bars li:nth-of-type(4) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
 section#about div.content-wrapper .about__music ul.about__music__bars li:nth-of-type(5) {
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 @-webkit-keyframes bounce {
   0% {
@@ -2365,11 +2395,6 @@ section#about div.content-wrapper .about__music .about__music__image img.about__
   -webkit-transform: skewY(-5deg);
           transform: skewY(-5deg);
 }
-@media only screen and (max-width: 37.5em) {
-  #contact-title h2.section__title span {
-    display: none;
-  }
-}
 @media only screen and (max-width: 80em) {
   #contact-title {
     margin-left: 5rem;
@@ -2378,7 +2403,7 @@ section#about div.content-wrapper .about__music .about__music__image img.about__
 }
 @media only screen and (max-width: 37.5em) {
   #contact-title {
-    top: 7rem;
+    top: 10rem;
     margin-left: 2rem;
   }
 }
@@ -2395,7 +2420,7 @@ section#contact {
   overflow-y: hidden;
   height: 1500px;
 }
-@media only screen and (max-width: 90em) {
+@media only screen and (max-width: 85.5em) {
   section#contact {
     height: 1200px;
   }
@@ -2423,7 +2448,7 @@ section#contact .contact__front-img {
   overflow-x: hidden;
   clip: rect(0px, 1340px, 100vh, 0px);
 }
-@media only screen and (max-width: 90em) {
+@media only screen and (max-width: 85.5em) {
   section#contact .contact__front-img {
     top: 14.5rem;
   }
@@ -2486,7 +2511,10 @@ section#contact .content-wrapper .contact__description button {
 }
 @media only screen and (max-width: 57em) {
   section#contact .content-wrapper .contact__description {
-    width: 100%;
+    width: 95%;
+  }
+  section#contact .content-wrapper .contact__description p {
+    line-height: 1.8;
   }
 }
 section#contact .content-wrapper ul.contact__list {
@@ -2496,6 +2524,7 @@ section#contact .content-wrapper ul.contact__list {
 @media only screen and (max-width: 57em) {
   section#contact .content-wrapper ul.contact__list {
     width: 100%;
+    margin-top: 2rem;
   }
 }
 section#contact .content-wrapper ul.contact__list li {

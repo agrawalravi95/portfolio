@@ -2,18 +2,11 @@
 	position:relative;
 	z-index: 30;
 	top: 2rem;
-	
 
 	h2.section__title {
 		line-height: 1;
 		color: rgba(white,0.5);
 		transform: skewY(-5deg);	
-
-		span {
-			@media #{$mobile} {
-				display: none;
-			}
-		}
 	}
 
 	@media #{$laptop} {
@@ -22,7 +15,7 @@
 	}
 
 	@media #{$mobile} {
-		top: 7rem;
+		top: 10rem;
 		margin-left: 2rem;
 	}
 
@@ -130,7 +123,11 @@ section#contact {
 			}
 
 			@media #{$tablet} {
-				width: 100%;
+				width: 95%;
+
+				p {
+					line-height: 1.8;
+				}
 			}
 		}
 
@@ -140,6 +137,7 @@ section#contact {
 
 			@media #{$tablet} {
 				width: 100%;
+				margin-top: 2rem;
 			}
 
 			li {
