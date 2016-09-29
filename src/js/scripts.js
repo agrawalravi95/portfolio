@@ -88,17 +88,3 @@ var smooth_fade = function(nextLocation) {
 var write_email = function() {
    window.location.href = "mailto:agrawalravi95@gmail.com";
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

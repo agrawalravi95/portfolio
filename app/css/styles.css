@@ -2300,20 +2300,20 @@ section#about div.content-wrapper .about__music ul.about__music__bars li:nth-of-
           animation-delay: 0.8s;
 }
 section#about div.content-wrapper .about__music ul.about__music__bars li:nth-of-type(2) {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
 }
 section#about div.content-wrapper .about__music ul.about__music__bars li:nth-of-type(3) {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
 }
 section#about div.content-wrapper .about__music ul.about__music__bars li:nth-of-type(4) {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
 }
 section#about div.content-wrapper .about__music ul.about__music__bars li:nth-of-type(5) {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 @-webkit-keyframes bounce {
   0% {

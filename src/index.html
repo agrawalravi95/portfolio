@@ -3,8 +3,6 @@
 
 <head>
   <meta charset="UTF-8">
-  
-  <link rel="stylesheet" href="css/styles.min.css">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   
@@ -13,6 +11,9 @@
   <meta name="url" content="http://agrawalravi.com/">
   <link rel="cannonical" href="http://www.agrawalravi.com"> -->
   <title>Ravi Agrawal - Product and UI/UX Designer </title>
+
+  <link rel="preload" as="style" href="css/styles.min.css" onload="this.rel='stylesheet'">
+
 
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -185,7 +186,7 @@
         <div class="content-wrapper skew--pos">
           <div class="skew--neg">
             <h2>WHAT CAN I DO FOR YOU?</h2>
-            <div class="portfolio__gettoknow" data-bottom="transform:translate3d(0px, 10px, 0px); opacity: 1" data-bottom-center="transform:translate3d(0px, 30px, 0px); opacity: 0">
+            <div class="portfolio__gettoknow" data-center="transform:translate3d(0px, -20px, 0px); opacity: 1" data-bottom-center="transform:translate3d(0px, 30px, 0px); opacity: 0">
               <div class="img-container">
                 <img src="assets/services/SP.png" alt="Strategy Design">
               </div>
@@ -196,7 +197,7 @@
                 </p>
               </div>
             </div>
-            <div class="portfolio__gettoknow" data-bottom="transform:translate3d(0px, 10px, 0px); opacity: 1" data-bottom-center="transform:translate3d(0px, 30px, 0px); opacity: 0">
+            <div class="portfolio__gettoknow" data-center="transform:translate3d(0px, -20px, 0px); opacity: 1" data-bottom-center="transform:translate3d(0px, 30px, 0px); opacity: 0">
               <div class="img-container">
                 <img src="assets/services/UX.png" alt="User Experience Design">
               </div>
@@ -207,7 +208,7 @@
                 </p>
               </div>
             </div>
-            <div class="portfolio__gettoknow" data-bottom="transform:translate3d(0px, 10px, 0px); opacity: 1" data-bottom-center="transform:translate3d(0px, 30px, 0px); opacity: 0">
+            <div class="portfolio__gettoknow" data-center="transform:translate3d(0px, -20px, 0px); opacity: 1" data-bottom-center="transform:translate3d(0px, 30px, 0px); opacity: 0">
               <div class="img-container">
                 <img src="assets/services/UI.png" alt="UI and Visual Design">
               </div>
@@ -218,7 +219,7 @@
                 </p>
               </div>
             </div>
-            <div class="portfolio__gettoknow" data-bottom="transform:translate3d(0px, 10px, 0px); opacity: 1" data-bottom-center="transform:translate3d(0px, 30px, 0px); opacity: 0">
+            <div class="portfolio__gettoknow" data-center="transform:translate3d(0px, -20px, 0px); opacity: 1" data-bottom-center="transform:translate3d(0px, 30px, 0px); opacity: 0">
               <div class="img-container">
                 <img src="assets/services/Dev.png" alt="Front End Development">
               </div>
@@ -388,7 +389,6 @@
         songDOM.innerText = song;
 
         artistDOM.appendChild(songDOM);
-        
 
       }, function errorCallback(status) {
         console.log('Something went wrong.');

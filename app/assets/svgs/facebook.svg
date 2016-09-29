@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="108px" height="208px" viewBox="0 0 108 208" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
-    <title>facebook-2</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="facebook-2" transform="translate(-83.000000, -9.000000)" fill="#FFFFFF">
-            <path d="M153.232,122.451 L184.939,122.451 L189.686,85.638 L153.232,85.638 L153.232,62.134 C153.232,51.476 156.192,44.212 171.477,44.212 L190.971,44.203 L190.971,11.278 C187.598,10.831 176.027,9.829 162.565,9.829 C134.459,9.829 115.217,26.984 115.217,58.49 L115.217,85.639 L83.428,85.639 L83.428,122.452 L115.216,122.452 L115.216,216.913 L153.232,216.912 L153.232,122.451 Z" id="f"></path>
-        </g>
-    </g>
-</svg>
+<svg width="108" height="208" viewBox="0 0 108 208" xmlns="http://www.w3.org/2000/svg"><title>facebook-2</title><path d="M70.232 113.451h31.707l4.747-36.813H70.232V53.134c0-10.658 2.96-17.922 18.245-17.922l19.494-.009V2.278C104.598 1.831 93.027.829 79.565.829c-28.106 0-47.348 17.155-47.348 48.661v27.149H.428v36.813h31.788v94.461l38.016-.001v-94.461z" fill="#FFF" fill-rule="evenodd"/></svg>

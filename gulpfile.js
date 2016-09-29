@@ -7,7 +7,9 @@ var gulp = require('gulp'),
     htmlmin = require('gulp-htmlmin'),
     jshint = require('gulp-jshint'),
     plumber = require('gulp-plumber'),
-    imageop = require('gulp-image-optimization');
+    imageop = require('gulp-image-optimization'),
+    uglify = require('gulp-uglify'),
+    svgmin = require('gulp-svgmin');
 
 var sassOptions = {
   style: 'expanded'
@@ -15,6 +17,7 @@ var sassOptions = {
 
 gulp.task('svgassets', function() {
 	return gulp.src('assets/**/*.svg')
+    .pipe(svgmin())
 	.pipe(gulp.dest('app/assets'))
 })
 
@@ -39,7 +42,7 @@ gulp.task('browser-sync', function() {
 gulp.task('html', function  () {
 
 	return gulp.src('src/**/*.html')
-    //.pipe(htmlmin({collapseWhitespace: false}))
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('app'));
 
 })
@@ -61,6 +64,7 @@ gulp.task('scripts', function () {
 	return gulp.src('src/js/*.js')
 	.pipe(jshint())
 	.pipe(jshint.reporter('default', { verbose: true }))
+    .pipe(uglify())
 	.pipe(gulp.dest('app/js'))
 
 });
