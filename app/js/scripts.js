@@ -72,6 +72,7 @@ var smooth_scroll_to = function(element, target, duration) {
 
 var smooth_fade = function(nextLocation) {
   console.log(nextLocation);
+  __insp.push(['tagSession', "viewed_case_study"]);
   var body = document.getElementsByTagName("body")[0];
   if (!body.classList.contains('fade-out')) {
     body.classList.add('fade-out');
@@ -82,10 +83,22 @@ var smooth_fade = function(nextLocation) {
   }, 1000);
 }
 
-// Reduce Body Height
+// Handle Mail Send
 
-var body = document.getElementsByTagName('body')[0];
-console.log(body.style.height);
+var write_email = function() {
+   window.location.href = "mailto:agrawalravi95@gmail.com";
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

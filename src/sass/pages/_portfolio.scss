@@ -42,6 +42,10 @@ section#portfolio {
 				@media #{$mobile} {
 					padding-bottom: 5rem;
 				}
+
+				.portfolio__image {
+					margin-top: 2rem;
+				}
 			}
 
 			.portfolio-content {
@@ -123,6 +127,7 @@ section#portfolio {
 				button.button--case-study {
 					background: $brand-color;
 					color: white;
+					opacity: 0.2;
 
 					will-change: transform, opacity;
 

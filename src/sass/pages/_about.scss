@@ -23,13 +23,24 @@ section#about {
 	
 		.about__left {
 			width: 40%;
-			padding-top: 9rem;
+			padding-top: 4rem;
 
 			@media #{$tablet} {
 				width: 100%;
 			}	
 
 			.current-block {
+				.current__logo {
+					max-width: 100px;
+
+					@media #{$tablet} {
+						display: none;
+					}
+
+					img {
+						width: 100%;
+					}
+				}
 				.current__position {
 					margin-bottom: 2rem;
 
@@ -114,7 +125,7 @@ section#about {
 		.about__music {
 			width: 100%;
 			margin-top: 5rem;
-			background: url('http://raumrot.com/wp-content/uploads/2016/02/msp_1407_2876.jpg');
+			background: url('../assets/music_back.jpg');
 			background-repeat: no-repeat;
 			background-size: cover;
 			position: relative;

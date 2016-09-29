@@ -6,16 +6,27 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     htmlmin = require('gulp-htmlmin'),
     jshint = require('gulp-jshint'),
-    plumber = require('gulp-plumber');
+    plumber = require('gulp-plumber'),
+    imageop = require('gulp-image-optimization');
 
 var sassOptions = {
   style: 'expanded'
 };
 
-gulp.task('assets', function() {
-	return gulp.src('assets/**/*.*')
+gulp.task('svgassets', function() {
+	return gulp.src('assets/**/*.svg')
 	.pipe(gulp.dest('app/assets'))
 })
+
+gulp.task('images', function() {
+    gulp.src(['assets/**/*.png','assets/**/*.jpg','assets/**/*.gif','assets/**/*.jpeg'])
+        .pipe(imageop({
+        optimizationLevel: 5,
+        progressive: true,
+        interlaced: true
+        }))
+        .pipe(gulp.dest('app/assets'));
+});
 
 gulp.task('browser-sync', function() {
     browserSync.init({
@@ -63,13 +74,13 @@ gulp.task('serve', function() {
 	gulp.watch('src/sass/**/*.scss', ['styles']);
 	gulp.watch('src/**/*.html', ['html']);
 	gulp.watch('src/js/*.js', ['scripts']);
-	gulp.watch('assets/**/*.*', ['assets']);
+	gulp.watch('assets/**/*.*', ['svgassets', 'images']);
 	gulp.watch("app/assets/**/*.*").on('change', browserSync.reload);
 	gulp.watch("app/**/*.html").on('change', browserSync.reload);
 	gulp.watch("app/js/*.js").on('change', browserSync.reload);
 
 });
 
-gulp.task('default', ['assets', 'styles', 'scripts', 'html', 'serve'], function() {
+gulp.task('default', ['svgassets', 'images', 'styles', 'scripts', 'html', 'serve'], function() {
 
 });

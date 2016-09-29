@@ -78,7 +78,6 @@ section#contact {
 		clip: rect(0px, $almighty-width, 100vh, 0px);
 
 		@media #{$mobile} {
-			// top: -5.25rem;
 			display: none;
 		}
 	}
