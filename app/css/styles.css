@@ -1581,21 +1581,31 @@ button.filled {
   }
 }
 .almighty-container.almighty-container--body {
-  max-height: 8600px;
+  max-height: 8300px;
 }
 @media only screen and (max-width: 85.5em) {
   .almighty-container.almighty-container--body {
     max-height: 8400px;
   }
 }
+@media only screen and (max-width: 80em) {
+  .almighty-container.almighty-container--body {
+    max-height: 8500px;
+  }
+}
 @media only screen and (max-width: 57em) {
   .almighty-container.almighty-container--body {
-    max-height: 7800px;
+    max-height: 10000px;
   }
 }
 @media only screen and (max-width: 37.5em) {
   .almighty-container.almighty-container--body {
-    max-height: 8000px;
+    max-height: 7600px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .almighty-container.almighty-container--body {
+    max-height: 7800px;
   }
 }
 
@@ -1696,9 +1706,14 @@ section#home .hero-image-container {
   width: 50%;
   max-height: 90vh;
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 57em) {
   section#home .hero-image-container {
     right: auto;
+    left: 2rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  section#home .hero-image-container {
     left: 0;
   }
 }
@@ -1710,10 +1725,16 @@ section#home .hero-wrapper {
   top: 25%;
   z-index: 5;
 }
+@media only screen and (max-width: 57em) {
+  section#home .hero-wrapper {
+    top: 35%;
+  }
+}
 @media only screen and (max-width: 37.5em) {
   section#home .hero-wrapper {
     padding-right: 2rem;
     padding-left: 1rem;
+    top: 30vh;
   }
 }
 section#home .hero-wrapper span.hero-hello {
@@ -1747,6 +1768,8 @@ section#home .hero-wrapper p.hero-description {
 @media only screen and (max-width: 37.5em) {
   section#home .hero-wrapper p.hero-description {
     margin-left: 0;
+    margin-top: -1.5rem;
+    line-height: 1.2;
   }
 }
 section#home .hero-wrapper p.hero-description span.dot {
@@ -1780,7 +1803,12 @@ section#home .hero-wrapper button.hero-button {
   position: relative;
   z-index: 10;
   top: -10rem;
-  margin-left: 8rem;
+  margin-left: 10rem;
+}
+@media only screen and (max-width: 57em) {
+  #portfolio-title {
+    margin-left: 5rem;
+  }
 }
 @media only screen and (max-width: 37.5em) {
   #portfolio-title {
@@ -1811,6 +1839,9 @@ section#portfolio .content-wrapper .portfolio-block {
 section#portfolio .content-wrapper .portfolio-block:nth-child(1) .portfolio-content {
   padding-top: 15rem;
 }
+section#portfolio .content-wrapper .portfolio-block:nth-child(2) .portfolio__back {
+  top: -5%;
+}
 section#portfolio .content-wrapper .portfolio-block:nth-child(3) {
   padding-bottom: 15rem;
 }
@@ -1821,6 +1852,9 @@ section#portfolio .content-wrapper .portfolio-block:nth-child(3) {
 }
 section#portfolio .content-wrapper .portfolio-block:nth-child(3) .portfolio__image {
   margin-top: 2rem;
+}
+section#portfolio .content-wrapper .portfolio-block:nth-child(3) .portfolio__back {
+  top: -5%;
 }
 section#portfolio .content-wrapper .portfolio-block .portfolio-content {
   display: block;
@@ -1841,13 +1875,19 @@ section#portfolio .content-wrapper .portfolio-block .portfolio-content {
     padding-top: 10rem;
   }
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 57em) {
   section#portfolio .content-wrapper .portfolio-block .portfolio-content {
     -ms-flex-flow: column-reverse wrap;
         flex-flow: column-reverse wrap;
     padding-left: 2rem;
     padding-right: 2rem;
     padding-top: 2rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  section#portfolio .content-wrapper .portfolio-block .portfolio-content {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 section#portfolio .content-wrapper .portfolio-block .portfolio__image {
@@ -1861,10 +1901,16 @@ section#portfolio .content-wrapper .portfolio-block .portfolio__image {
 section#portfolio .content-wrapper .portfolio-block .portfolio__image img {
   width: 100%;
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 57em) {
   section#portfolio .content-wrapper .portfolio-block .portfolio__image {
     width: 100%;
     margin-top: 2rem;
+    padding: 0 3rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  section#portfolio .content-wrapper .portfolio-block .portfolio__image {
+    padding: 0 2rem;
   }
 }
 section#portfolio .content-wrapper .portfolio-block .portfolio__description {
@@ -1874,9 +1920,15 @@ section#portfolio .content-wrapper .portfolio-block .portfolio__description {
   -webkit-transition: opacity 300ms ease-in;
   transition: opacity 300ms ease-in;
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 57em) {
   section#portfolio .content-wrapper .portfolio-block .portfolio__description {
     width: 100%;
+    padding: 0 3rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  section#portfolio .content-wrapper .portfolio-block .portfolio__description {
+    padding: 0 2rem;
   }
 }
 section#portfolio .content-wrapper .portfolio-block .portfolio__description h1.portfolio__title {
@@ -1909,11 +1961,15 @@ section#portfolio .content-wrapper .portfolio-block .portfolio__description butt
 }
 section#portfolio .content-wrapper .portfolio-block .portfolio__back {
   position: absolute;
-  top: 20%;
+  top: 10%;
   left: 0;
   z-index: 0;
   width: 100%;
-  opacity: 0;
+}
+@media only screen and (max-width: 57em) {
+  section#portfolio .content-wrapper .portfolio-block .portfolio__back {
+    display: none;
+  }
 }
 section#portfolio .content-wrapper .portfolio-block .portfolio__back img {
   width: 100%;
@@ -1980,20 +2036,27 @@ section#portfolio .content-wrapper:nth-child(2) .skew--neg h2 {
 }
 section#portfolio .content-wrapper:nth-child(2) .portfolio__gettoknow {
   width: 50%;
-  padding: 2rem 3rem;
+  padding: 2rem;
   display: inline-block;
   will-change: transform, opacity;
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 57em) {
   section#portfolio .content-wrapper:nth-child(2) .portfolio__gettoknow {
     width: 100%;
-    padding-left: 0rem;
-    padding-right: 0rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  section#portfolio .content-wrapper:nth-child(2) .portfolio__gettoknow {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 section#portfolio .content-wrapper:nth-child(2) .portfolio__gettoknow p.caption {
   font-size: 1rem;
   line-height: 2;
+  max-width: 500px;
 }
 section#portfolio .content-wrapper:nth-child(2) .portfolio__gettoknow.portfolio__soft-stack {
   width: 100%;
@@ -2123,6 +2186,11 @@ section#about div.content-wrapper {
   display: flex;
   -ms-flex-flow: row wrap;
       flex-flow: row wrap;
+}
+@media only screen and (max-width: 57em) {
+  section#about div.content-wrapper {
+    margin-top: 12rem;
+  }
 }
 section#about div.content-wrapper .about__left {
   width: 40%;
@@ -2292,28 +2360,28 @@ section#about div.content-wrapper .about__music ul.about__music__bars li {
   background: #fff;
   -webkit-transform: translateY(4.5rem);
           transform: translateY(4.5rem);
-  -webkit-animation: bounce 1s infinite cubic-bezier(0, 0, 0, 1);
-          animation: bounce 1s infinite cubic-bezier(0, 0, 0, 1);
+  -webkit-animation: bounce 1.2s infinite ease-in-out;
+          animation: bounce 1.2s infinite ease-in-out;
 }
 section#about div.content-wrapper .about__music ul.about__music__bars li:nth-of-type(1) {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
 }
 section#about div.content-wrapper .about__music ul.about__music__bars li:nth-of-type(2) {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
 }
 section#about div.content-wrapper .about__music ul.about__music__bars li:nth-of-type(3) {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
 }
 section#about div.content-wrapper .about__music ul.about__music__bars li:nth-of-type(4) {
-  -webkit-animation-delay: 0.7s;
-          animation-delay: 0.7s;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
 }
 section#about div.content-wrapper .about__music ul.about__music__bars li:nth-of-type(5) {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
 }
 @-webkit-keyframes bounce {
   0% {
@@ -2412,11 +2480,11 @@ section#about div.content-wrapper .about__music .about__music__image img.about__
 }
 @media only screen and (max-width: 80em) {
   #contact-title {
-    margin-left: 5rem;
+    margin-left: 1rem;
     top: -2rem;
   }
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 57em) {
   #contact-title {
     top: 10rem;
     margin-left: 2rem;
@@ -2446,7 +2514,7 @@ section#contact {
     top: -28rem;
   }
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 57em) {
   section#contact {
     top: -30rem;
   }
@@ -2465,10 +2533,15 @@ section#contact .contact__front-img {
 }
 @media only screen and (max-width: 85.5em) {
   section#contact .contact__front-img {
-    top: 14.5rem;
+    top: 13rem;
   }
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 80em) {
+  section#contact .contact__front-img {
+    top: 9rem;
+  }
+}
+@media only screen and (max-width: 57em) {
   section#contact .contact__front-img {
     display: none;
   }
@@ -2480,7 +2553,7 @@ section#contact .contact__back-img {
   overflow-x: hidden;
   clip: rect(0px, 1370px, 100vh, 0px);
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 57em) {
   section#contact .contact__back-img {
     display: none;
   }
@@ -2498,6 +2571,17 @@ section#contact .content-wrapper {
   -ms-flex-flow: row wrap;
       flex-flow: row wrap;
   color: white;
+}
+@media only screen and (max-width: 80em) {
+  section#contact .content-wrapper {
+    top: 35rem;
+  }
+}
+@media only screen and (max-width: 57em) {
+  section#contact .content-wrapper {
+    padding-left: 5rem;
+    top: 30rem;
+  }
 }
 @media only screen and (max-width: 37.5em) {
   section#contact .content-wrapper {
@@ -2522,6 +2606,7 @@ section#contact .content-wrapper .contact__description button {
 @media only screen and (max-width: 80em) {
   section#contact .content-wrapper .contact__description {
     width: 40%;
+    margin-right: 3rem;
   }
 }
 @media only screen and (max-width: 57em) {

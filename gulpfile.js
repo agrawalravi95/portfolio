@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     htmlmin = require('gulp-htmlmin'),
     jshint = require('gulp-jshint'),
     plumber = require('gulp-plumber'),
-    imageop = require('gulp-image-optimization'),
+    imagemin = require('gulp-imagemin'),
     uglify = require('gulp-uglify'),
     svgmin = require('gulp-svgmin');
 
@@ -23,11 +23,7 @@ gulp.task('svgassets', function() {
 
 gulp.task('images', function() {
     gulp.src(['assets/**/*.png','assets/**/*.jpg','assets/**/*.gif','assets/**/*.jpeg'])
-        .pipe(imageop({
-        optimizationLevel: 5,
-        progressive: true,
-        interlaced: true
-        }))
+        .pipe(imagemin())
         .pipe(gulp.dest('app/assets'));
 });
 

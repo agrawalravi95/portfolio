@@ -24,8 +24,12 @@ section#home {
 		width: 50%;
 		max-height: 90vh;
 
-		@media #{$mobile} {
+		@media #{$tablet} {
 			right: auto;
+			left: 2rem;
+		}
+
+		@media #{$mobile} {
 			left: 0;
 		}
 
@@ -40,9 +44,15 @@ section#home {
 		top: 25%;
 		z-index: 5;
 
+		@media #{$tablet} {
+			top: 35%;
+		}
+		
+
 		@media #{$mobile} {
 			padding-right: 2rem;
 			padding-left: 1rem;
+			top: 30vh;
 		}
 
 		span.hero-hello {
@@ -75,6 +85,8 @@ section#home {
 
 			@media #{$mobile} {
 				margin-left: 0;
+				margin-top: -1.5rem;
+				line-height: 1.2;
 			}
 
 			span.dot {
@@ -82,6 +94,13 @@ section#home {
 				font-size: 5rem;
 				bottom: .3rem;
 				position: relative;
+
+				// &:after {
+				// 	@media #{$mobile} {
+				// 		content: "\A";
+    //  				white-space: pre; 
+				// 	}
+				// }
 			}
 		}
 

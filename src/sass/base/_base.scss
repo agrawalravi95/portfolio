@@ -152,18 +152,26 @@ button {
 	}
 
 	&.almighty-container--body {
-		max-height: 8600px;
+		max-height: 8300px;
 
 		@media #{$desktop} {
 			max-height: 8400px;
 		}
 
+		@media #{$laptop} {
+			max-height: 8500px;
+		}
+
 		@media #{$tablet} {
-			max-height: 7800px;
+			max-height: 10000px;
 		}
 
 		@media #{$mobile} {
-			max-height: 8000px;
+			max-height: 7600px;
+		}
+
+		@media only screen and (max-width: 320px) {
+			max-height: 7800px;
 		}
 	}
 }
@@ -177,5 +185,3 @@ button {
 	z-index: 0;
 	opacity: .5;
 }
-
-
