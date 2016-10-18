@@ -20,21 +20,27 @@ section#home {
 	.hero-image-container {
 		position: absolute;
 		right:0;
-		top: 0;
+		top: 8rem;
 		width: 50%;
 		max-height: 90vh;
 
 		@media #{$tablet} {
 			right: auto;
-			left: 2rem;
+			left: 6rem;
+			top: 8rem;
+			width: 40%;
 		}
 
 		@media #{$mobile} {
-			left: 0;
+			left: 2.5rem;
+			top: 2rem;
 		}
 
 		img.hero-image {
 			width: 100%;
+			max-width: 400px;
+			display: block;
+			margin: 0 auto;
 		}
 	}
 	
@@ -45,7 +51,7 @@ section#home {
 		z-index: 5;
 
 		@media #{$tablet} {
-			top: 35%;
+			top: 45%;
 		}
 		
 

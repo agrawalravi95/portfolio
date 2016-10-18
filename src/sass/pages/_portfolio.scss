@@ -4,6 +4,10 @@
 	top: -10rem;
 	margin-left: 10rem;
 
+	@media #{$laptop} {
+		margin-left: 4rem;
+	}
+
 	@media #{$tablet} {
 		margin-left: 5rem;
 	}
