@@ -167,11 +167,11 @@ button {
 		}
 
 		@media #{$mobile} {
-			max-height: 7600px;
+			max-height: 7750px;
 		}
 
 		@media only screen and (max-width: 320px) {
-			max-height: 7800px;
+			max-height: 8000px;
 		}
 	}
 }

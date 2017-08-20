@@ -230,6 +230,11 @@ section#portfolio {
 				top: 5rem;
 			}
 
+			@media #{$mobile} {
+				padding-right: 0;
+				padding-left: 0;
+			}
+
 			.skew--neg {
 				max-width: $max-width;
 				margin: 0 auto;
@@ -242,17 +247,22 @@ section#portfolio {
 					margin-left: 3rem;
 
 					@media #{$mobile} {
-						margin-left: 0;
+						margin: 0 auto;
+						text-align: center;
 					}
 				}
 			}
 		
 			.portfolio__gettoknow {
-				width: 50%;
+				width: 100%;
 				padding: 2rem;
 				display: inline-block;
 
 				will-change: transform, opacity;
+
+				&:nth-of-type(1) {
+					margin-top: 5rem;
+				}
 
 				@media #{$tablet} {
 					width: 100%;
@@ -265,10 +275,45 @@ section#portfolio {
 					padding-right: 0;
 				}
 
-				p.caption {
-					font-size: 1rem;
-					line-height: 2;
+
+				.img-container {
 					max-width: 500px;
+					width: 50%;
+					display: inline-block;
+
+					@media #{$mobile} {
+						width: 100%;
+					}
+
+					img {
+						width: 100%;
+					}
+				}
+
+				.content-container {
+					
+					width: 50%;
+					display: inline-block;
+					padding-left: 2rem;
+
+					@media #{$mobile} {
+						width: 100%;
+						padding: 0 2rem;
+						margin-top: 2rem;
+					}
+
+					p.caption {
+						font-size: 1rem;
+						line-height: 2;
+						max-width: 500px;
+						margin-top: .5rem;
+						color: $text-color;
+					}
+
+					h3 {
+						color: $brand-color;
+						padding-top: 0;
+					}
 				}
 
 				&.portfolio__soft-stack {
@@ -351,25 +396,6 @@ section#portfolio {
 							}
 						}
 					}
-				}
-
-				h3 {
-					color: $brand-color;
-				}
-
-				.img-container {
-					max-width: 500px;
-
-					img {
-						width: 100%;
-					}
-				}
-
-				
-
-				p.caption {
-					margin-top: .5rem;
-					color: $text-color;
 				}
 
 				button.button--gettoknow {
